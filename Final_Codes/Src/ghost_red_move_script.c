@@ -17,7 +17,6 @@ static void ghost_red_move_script_FREEDOM(Ghost* ghost, Map* M) {
 	// [HACKATHON 2-4]
 	// Uncomment the following code and finish pacman picking random direction.
 
-	ghost_NextMove(ghost, generateRandomNumber(1, 4));
 	/*
 	static Directions proba[4]; // possible movement
 	int cnt = 0;
@@ -26,7 +25,7 @@ static void ghost_red_move_script_FREEDOM(Ghost* ghost, Map* M) {
 	ghost_NextMove(ghost, proba[pick a reasonable random number]);
 	*/
 
-	// [TODO]
+	// [TODO] (Not in Hackathon) 
 	// Description:
 	// For red(Blinky) ghost, we ask you to implement an random strategy ghost, 
 	// which means moving in random direction.
