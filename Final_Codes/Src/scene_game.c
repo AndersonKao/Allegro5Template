@@ -252,6 +252,9 @@ static void on_key_down(int key_code) {
 			else 
 				printf("cheat mode off\n");
 			break;
+		case ALLEGRO_KEY_G:
+			debug_mode = !debug_mode;
+			break;
 		*/
 	default:
 		break;
