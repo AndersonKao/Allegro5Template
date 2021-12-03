@@ -74,7 +74,7 @@ void printDirection(const Directions a);
 bool movetime(int speed);
 uint32_t generateRandomNumber(uint32_t a, uint32_t b);
 double generateRandomFloat(void);
-bool bernoulliTrail(double p);
+bool bernoulliTrail(double p); // Given a Possibility and decided if occur.
 // [HACKATHON 3-4]
 // TODO: Declare a function.
 // Determines whether the point (px, py) is in rect (x, y, w, h).
