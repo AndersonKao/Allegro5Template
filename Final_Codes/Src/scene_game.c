@@ -72,10 +72,9 @@ static void init(void) {
 		// TODO: create a ghost.
 		// Try to look the definition of ghost_create and figure out what should be placed here.
 		for (int i = 0; i < GHOST_NUM; i++) {
-			ghosts[i] = ghost_create(Blinky);  
 			/*
 			game_log("creating ghost %d\n", i);
-			ghosts[i] = ghost_create(Blinky);  
+			ghosts[i] = ghost_create(...);  
 			if (!ghosts[i])
 				game_abort("error creating ghost\n");
 			*/
@@ -114,7 +113,7 @@ static void checkItem(void) {
 		break;
 	}
 	*/
-	// [HACKTHON 1-4]
+	// [HACKATHON 1-4]
 	// erase the item you eat from map
 	// becareful no erasing the wall block.
 	/*
