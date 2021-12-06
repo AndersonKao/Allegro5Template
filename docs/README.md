@@ -11,10 +11,15 @@
 ### Windows
 
 #### Visual Studio
+
 **This year we highly recomment you use visual studio 2019)**
+
 But the setup is basically the same.
+
 Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
+
 Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
+
 > Just watch the video will be enough.
 
 #### Code::Blocks
