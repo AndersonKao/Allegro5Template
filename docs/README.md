@@ -105,12 +105,13 @@ Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
 
 #### XCode
 
-Step-by-step tutorial on [YouTube](https://youtu.be/7nJNDRCq5o0).
+Step-by-step tutorial on [YouTube](https://youtu.be/QZdHjFQUQPo).
+###### ~~Step-by-step tutorial on [YouTube](https://youtu.be/7nJNDRCq5o0).~~(Old macOS 10.X)
 
 Open `Terminal` and type:
 
 ```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 You might need to enter your password and press yes a several times.
@@ -125,25 +126,27 @@ Open `XCode`, Create a new `MacOS` project, choose `App`.
 
 Product Name type `allegro-test`, and for Organization Identifier, you can type anything you want. For language, choose `Objective-C`, and uncheck all other checkboxes.
 
-Delete `AppDelegate.h`, `AppDelegate.m`, `Main.m` and select `Move to Trash`.
+Delete `AppDelegate.h`, `AppDelegate.m`, `ViewController.h`, `ViewController.m`, `Main.m` and select `Move to Trash`.
 
 ![](imgs/mac-del-file.png)
 ![](imgs/mac-trash.png)
 
 Click your project at the left side, go to `Building Settings > All` and search `Search Paths`.
 
-Under `Search Paths`, set `Header Search Paths` to `/usr/local/include` and set `Library Search Paths` to `/usr/local/lib`. Both use `non-recursive`.
+Under `Search Paths`, set `Header Search Paths` to `/usr/local/include` and `/opt/homebrew/Cellar/allegro/5.2.7.0/include`(For new `homebrew` case) and set `Library Search Paths` to `/usr/local/lib` and `/opt/homebrew/Cellar/allegro/5.2.7.0/lib`. Both use `non-recursive`.
 
 ![](imgs/mac-search-paths.png)
+**The image is not updated!!**
 
 Open terminal and type:
 
 ```shell
 cd /usr/local/Cellar
+# or /opt/homebrew/Cellar/allegro
 open .
 ```
 
-Navigate to `allegro/5.2.6.0/lib/`
+Navigate to `allegro/5.2.7.0/lib/`
 
 Sort by `Modified date` and select all files that is modified today. (don't need to select the `pkgconfig` folder)
 
