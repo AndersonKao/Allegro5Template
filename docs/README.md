@@ -1,14 +1,21 @@
 ## Installation
 
 - [Windows](#windows)
+  - [Visual Studio](#visual-studio)
   - [Code::Blocks](#codeblocks)
   - [Dev-C++](#dev-c)
-  - [Visual Studio](#visual-studio)
 - [Mac OS](#mac-os)
   - [XCode](#x-code)
 - [Others](#others)
 
 ### Windows
+
+#### Visual Studio
+**This year we highly recomment you use visual studio 2019)**
+But the setup is basically the same.
+Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
+Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
+> Just watch the video will be enough.
 
 #### Code::Blocks
 
@@ -92,12 +99,6 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
 #### Dev-C++
 
 Step-by-step tutorial on [YouTube](https://youtu.be/lwscVtIUy6k).
-
-> Just watch the video will be enough.
-
-#### Visual Studio
-
-Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
 
 > Just watch the video will be enough.
 
