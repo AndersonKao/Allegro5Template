@@ -1,5 +1,7 @@
 ## Installation
 
+> Images in this page are not updated, but most of them are just difference on version. 
+
 - [Windows](#windows)
   - [Visual Studio](#visual-studio)
   - [Code::Blocks](#codeblocks)
