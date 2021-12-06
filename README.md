@@ -1,4 +1,4 @@
-# Allegro 5 2D Shooter Game Template
+# Allegro 5 Pacman Game Template
 
 ![preview](docs/imgs/preview.jpg)
 
