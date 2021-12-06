@@ -1,28 +1,27 @@
 # Allegro 5 2D Shooter Game Template
 
-![preview](docs/imgs/preview.png)
+![preview](docs/imgs/preview.jpg)
 
 Related Links:
-- **[Fast Download Link for files below (Google Drive)](https://drive.google.com/drive/folders/1M1cWB27eXuR60JmlZTVwaamQ7FIb4uPu?usp=sharing)**
+- **[Fast Download Link for files below (Google Drive)](https://drive.google.com/drive/folders/1HydER3xYczTClG5nrJix9n4rOVvXtn7Z?usp=sharing)**
 - [Exercises](/Exercises)
 - [Exercises step-by-step video](https://youtu.be/Araij6j6QME)
 - [Exercises Template](https://github.com/j3soon/Allegro5Template/releases/download/v2020/Exercises.Template.zip)
-- [Tutorial Slides](https://github.com/j3soon/Allegro5Template/blob/master/Allegro5_Tutorial.pdf)
-- [Final Project Rules](https://github.com/j3soon/Allegro5Template/blob/master/Final_Project_Rules.pdf)
-- [Final Project Rules (English)](https://github.com/j3soon/Allegro5Template/blob/master/Final_Project_Rules_Eng.pdf)
-- [Final Code (basic)](/Final%20Code%20\(basic\))
-- [Final Code (advanced)](/Final%20Code%20\(advanced\))
+- [Tutorial Slides](https://github.com/TunchinKao/Allegro5Template/blob/master/Allegro5_Tutorial.pdf)
+- [Final Project Rules](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules.pdf)
+- [Final Project Rules (English)](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules_Eng.pdf)
+- [Final Code (basic)](/Final_Codes)
 
 ## Installation
 
 Follow the steps [here](docs/README.md).
 
 - [Windows](docs/README.md#windows)
+  - [Visual Studio](docs/README.md#visual-studio): [Video](https://youtu.be/HPHd92nj0Io)
   - [Code::Blocks](docs/README.md#codeblocks): [Video](https://youtu.be/6qzWKRxw9eY)
   - [Dev-C++](docs/README.md#dev-c): [Video](https://youtu.be/lwscVtIUy6k)
-  - [Visual Studio](docs/README.md#visual-studio): [Video](https://youtu.be/HPHd92nj0Io)
 - [Mac OS](docs/README.md#mac-os)
-  - [XCode](docs/README.md#xcode): [Video](https://youtu.be/7nJNDRCq5o0)
+  - [XCode](docs/README.md#xcode): [Video](https://youtu.be/QZdHjFQUQPo)
 - [Others](docs/README.md#others)
 
 <!--## Examples-->
