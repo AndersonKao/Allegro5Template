@@ -114,7 +114,11 @@ Follow the steps [here](docs/README.md).
   You should change your input from `Chinese` to `English`, otherwise the keycode will be different.
 
 ### Installation on Windows
-
+- LNK2019 or LNK2001 bug in Visual Studio
+	- Try turn the option "Project -> Project Property -> Configuration Properties Whole Program Optimization" to "Use Link Time Code Generation
+- "\ZI \GL is not compatible" Problem in Visual Studio
+	1. Turn "Project Property -> Configuration Properties -> C/C++ -> General -> Debug Information Format" to "none" or others (Just don't include \ZI)
+	- **Remember to install the Allegro addons by yourself** !!
 - `fopen is not safe ...` in Visual Studio
 
   - Add `#define _CRT_SECURE_NO_DEPRECATE`/`#define _CRT_SECURE_NO_WARNINGS` at the top of your `main.c` file.
