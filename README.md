@@ -10,7 +10,7 @@ Related Links:
 - [Tutorial Slides](https://github.com/TunchinKao/Allegro5Template/blob/master/Allegro5_Tutorial.pdf)
 - [Final Project Rules](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules.pdf)
 - [Final Project Rules (English)](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules_Eng.pdf)
-- [Final Code (basic)](/Final_Codes)
+- [Final Code](/Final_Codes)
 
 ## Installation
 
