@@ -18,6 +18,8 @@
 
 But the setup is basically the same.
 
+If you use the release VS
+
 Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
 
 Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
