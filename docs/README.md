@@ -7,7 +7,7 @@
   - [Code::Blocks](#codeblocks)
   - [Dev-C++](#dev-c)
 - [Mac OS](#mac-os)
-  - [XCode](#x-code)
+  - [XCode](#xcode)
 - [Others](#others)
 
 ### Windows
@@ -16,7 +16,7 @@
 
 **This year we highly recommend you use visual studio 2019**
 
-If you use the release VS2019, open them with Visual Studio 2019 will be enough.
+If you use the release VS2019, open it with Visual Studio 2019 will be enough.
 
 Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
 
