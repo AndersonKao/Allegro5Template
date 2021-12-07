@@ -14,11 +14,9 @@
 
 #### Visual Studio
 
-**This year we highly recomment you use visual studio 2019**
+**This year we highly recommend you use visual studio 2019**
 
-But the setup is basically the same.
-
-If you use the release VS
+If you use the release VS2019, open them with Visual Studio 2019 will be enough.
 
 Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
 
