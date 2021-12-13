@@ -115,7 +115,7 @@ static void checkItem(void) {
 	*/
 	// [HACKATHON 1-4]
 	// erase the item you eat from map
-	// becareful no erasing the wall block.
+	// be careful no erasing the wall block.
 	/*
 		basic_map->map...;
 	*/
