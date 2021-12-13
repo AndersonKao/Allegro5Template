@@ -8,8 +8,8 @@ Related Links:
 - [Exercises step-by-step video](https://youtu.be/Araij6j6QME)
 - [Exercises Template](https://github.com/j3soon/Allegro5Template/releases/download/v2020/Exercises.Template.zip)
 - [Tutorial Slides](https://github.com/TunchinKao/Allegro5Template/blob/master/Allegro5_Tutorial.pdf)
-- [Final Project Rules](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules.pdf)
-- [Final Project Rules (English)](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules_Eng.pdf)
+- [Final Project Rules](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules_Hu.pdf)
+- [Final Project Rules (English)](https://github.com/TunchinKao/Allegro5Template/blob/master/Final_Project_Rules_Hu_Eng.pdf)
 - [Final Code](/Final_Codes)
 
 ## Installation
