@@ -88,6 +88,12 @@ static void on_mouse_move(int a, int mouse_x, int mouse_y, int f) {
 
 //	[HACKATHON 3-8]
 //	TODO: When btnSettings clicked, switch to settings scene
+//  `game_change_scene` is defined in `game.h`.
+//  You can check line 121 `scene_menu.c` to see how to use this function.
+// 	Utilize the member defined in struct `Button`.
+//  The logic here is 
+//  `if clicked the mouse` && `mouse position is in the area of button`
+// 	      `Enter the setting scene`
 //	Uncomment and fill the code below
 /*
 static void on_mouse_down() {
@@ -139,7 +145,13 @@ Scene scene_menu_create(void) {
 	// [HACKATHON 3-9]
 	// TODO: Register on_mouse_down.
 	// Uncomment the code below.
-	//scene.on_mouse_down = &on_mouse_down;
+	/*
+	scene.on_mouse_down = &on_mouse_down;
+	*/
+	// -------------------------------------
+
+
+
 	// TODO: Register more event callback functions such as keyboard, mouse, ...
 	game_log("Menu scene created");
 	return scene;

@@ -67,6 +67,9 @@ static void init(void) {
 	/*
 	ghosts = (...)malloc(sizeof(...) * GHOST_NUM)
 	*/
+	if(!ghosts){
+		game_log("We haven't create any ghosts!\n");
+	}
 	else {
 		// [HACKATHON 2-2]
 		// TODO: create a ghost.

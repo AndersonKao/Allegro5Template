@@ -162,7 +162,7 @@ bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room) {
 	/*
 	... ghost->objData.Coord.x, ... ghost->objData.Coord.y;
 
-	switch (targetDirect)
+	switch (targetDirec)
 	{
 	case UP:
 		...
