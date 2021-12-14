@@ -90,6 +90,7 @@ static void on_mouse_move(int a, int mouse_x, int mouse_y, int f) {
 //	TODO: When btnSettings clicked, switch to settings scene
 //  `game_change_scene` is defined in `game.h`.
 //  You can check line 121 `scene_menu.c` to see how to use this function.
+//  And find the corresponding function for `scene_setting`
 // 	Utilize the member defined in struct `Button`.
 //  The logic here is 
 //  `if clicked the mouse` && `mouse position is in the area of button`
