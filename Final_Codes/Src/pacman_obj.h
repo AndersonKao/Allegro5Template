@@ -29,7 +29,7 @@ typedef struct Pacman{
 } Pacman;
 
 Pacman* pacman_create();
-void pacman_destory(Pacman* pman);
+void pacman_destroy(Pacman* pman);
 
 void pacman_draw(Pacman* pacman);
 void pacman_move(Pacman* pacman, Map* M);

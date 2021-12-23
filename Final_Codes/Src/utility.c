@@ -175,8 +175,9 @@ void printDirection(const Directions a) {
 }
 
 bool movetime(int speed) {
+	//game_log("%d %d %d", GAME_TICK, GAME_TICK_CD, speed);
 	// NOTODO
-	return GAME_TICK % (GAME_TICK_CD / speed) == 0;
+	return (GAME_TICK % (GAME_TICK_CD / speed)) == 0;
 }
 
 uint32_t generateRandomNumber(uint32_t a, uint32_t b) {
