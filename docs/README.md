@@ -15,7 +15,7 @@ If you links Allegro5 libraries by yourself, that is, using a pre-built Allegro5
 
 For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
 
-To check your gcc version, open command window, go to the folder where you installed minGW. (.../CodeBlocks/MinGW/bin for Code::Blocks) And type **"gcc --version"**.
+To check your gcc version, open command window, go to the folder where you installed minGW. (".../CodeBlocks/MinGW/bin" for Code::Blocks) And type **"gcc --version"**.
 
 ![image](https://user-images.githubusercontent.com/56912772/207344304-bd9880f7-961a-4c3f-b0dc-e87f88c43c1d.png)
 
