@@ -10,6 +10,20 @@
   - [XCode](#xcode)
 - [Others](#others)
 
+### Note
+If you links Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
+
+For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
+
+To check your gcc version, open command window, go to the folder where you installed minGW. (.../CodeBlocks/MinGW/bin for Code::Blocks) And type **"gcc --version"**.
+
+![image](https://user-images.githubusercontent.com/56912772/207344304-bd9880f7-961a-4c3f-b0dc-e87f88c43c1d.png)
+
+Then go the the Allegro5 github page to find the matched version of pre-built binaries.
+
+![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
+
+
 ### Windows
 
 #### Visual Studio
@@ -28,9 +42,9 @@ Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
 
 Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
 
-- Download [allegro-mingw-gcc6.2.0-x86-static-5.2.2.zip](https://github.com/liballeg/allegro5/releases/download/5.2.2.0/allegro-mingw-gcc6.2.0-x86-static-5.2.2.zip)
+- Download [allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip)
 
-  Un-zip the file and move it to your C drive. The full path should be like: `C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro`
+  Un-zip the file and move it to your C drive. The full path should be like: `C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro`
 
 - Create a new project
   - Open Code::Blocks
@@ -47,7 +61,7 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
     Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Compiler` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro\include\
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\include\
     ```
 
   - Set up library directories
@@ -55,19 +69,19 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
     Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Linker` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro\lib\
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\
     ```
 
   - Select `Debug` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro\lib\liballegro_monolith-debug.dll.a
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\liballegro_monolith-debug.dll.a
     ```
 
   - Select `Release` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro\lib\liballegro_monolith.dll.a
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\liballegro_monolith.dll.a
     ```
 
   - Click `OK`.
