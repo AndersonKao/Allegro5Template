@@ -61,7 +61,7 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
     Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Compiler` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\include\
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\include\
     ```
 
   - Set up library directories
@@ -69,19 +69,19 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
     Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Linker` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\
     ```
 
   - Select `Debug` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\liballegro_monolith-debug.dll.a
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith-debug.dll.a
     ```
 
   - Select `Release` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
     ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip\allegro\lib\liballegro_monolith.dll.a
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith.dll.a
     ```
 
   - Click `OK`.
@@ -112,7 +112,7 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
 
   - If it pops a `dll not found` error, copy the file below to `[Project Directory]\bin\Debug\`
     ```
-    C:\allegro-mingw-gcc6.2.0-x86-static-5.2.2\allegro\bin\allegro_monolith-debug-5.2.dll
+    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\bin\allegro_monolith-debug-5.2.dll
     ```
 
   - Press `F9` and the window will pop out saying "Welcome to Allegro!".
