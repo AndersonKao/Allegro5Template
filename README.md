@@ -40,6 +40,9 @@ Follow the steps [here](docs/README.md).
 
   [Examples](https://github.com/liballeg/allegro5/tree/master/examples)
 
+- GitHub repo of I2P(I) final project before 2020
+  [Source Code](https://github.com/j3soon/Allegro5Template)
+
 ## Tutorials
 
 [C++ Allegro 5 Made Easy](https://www.youtube.com/watch?v=IZ2krJ8Ls2A&list=PL6B459AAE1642C8B4 )
