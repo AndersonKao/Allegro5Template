@@ -193,7 +193,7 @@ static void draw(void) {
 }
 
 static void draw_hitboxes(void) {
-	RecArea pmanHB = getDrawArea(pman->objData, GAME_TICK_CD);
+	RecArea pmanHB = getDrawArea((object *)pman, GAME_TICK_CD);
 	al_draw_rectangle(
 		pmanHB.x, pmanHB.y,
 		pmanHB.x + pmanHB.w, pmanHB.y + pmanHB.h,
@@ -201,7 +201,7 @@ static void draw_hitboxes(void) {
 	);
 
 	for (int i = 0; i < GHOST_NUM; i++) {
-		RecArea ghostHB = getDrawArea(ghosts[i]->objData, GAME_TICK_CD);
+		RecArea ghostHB = getDrawArea((object *)ghosts[i], GAME_TICK_CD);
 		al_draw_rectangle(
 			ghostHB.x, ghostHB.y,
 			ghostHB.x + ghostHB.w, ghostHB.y + ghostHB.h,

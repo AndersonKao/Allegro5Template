@@ -66,10 +66,10 @@ typedef struct bitmapdata{
 
 //extern const int GridSize;
 
-void setRecArea(RecArea* RA, float x, float y, float w, float h);
-RecArea getDrawArea(object obj, uint32_t TICK);
+void setRecArea(RecArea *RA, float x, float y, float w, float h);
+RecArea getDrawArea(object *obj, uint32_t TICK);
 bool RecAreaOverlap(const RecArea RA,const RecArea RB);
-void printRecAreaInfo(const RecArea* RA);
+void printRecAreaInfo(const RecArea *RA);
 void printDirection(const Directions a);
 bool movetime(int speed);
 uint32_t generateRandomNumber(uint32_t a, uint32_t b);

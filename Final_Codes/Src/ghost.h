@@ -31,8 +31,8 @@ typedef enum {
 
 
 typedef struct Ghost{
-	bitmapdata imgdata;
 	object objData;
+	bitmapdata imgdata;
 	script_func_ptr move_script;
 	int speed;
 	int64_t previous_timer_val;

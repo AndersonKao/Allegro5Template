@@ -114,27 +114,28 @@ bool RecAreaOverlap(const RecArea RA,const RecArea RB) {
 		return false;
 	*/
 }
-RecArea getDrawArea(object obj, uint32_t TOTAL_TICK) {
+RecArea getDrawArea(object *obj, uint32_t TOTAL_TICK) {
 	// NOTODO
+	// To understand why getDrawArea((object*)ghost, ...) works, please read https://stackoverflow.com/questions/524033/how-can-i-simulate-oo-style-polymorphism-in-c.
 	RecArea target;
 		
-	target.x = map_offset_x + obj.Coord.x * block_width;
-	target.y = map_offset_y + obj.Coord.y * block_height;
+	target.x = map_offset_x + obj->Coord.x * block_width;
+	target.y = map_offset_y + obj->Coord.y * block_height;
 	target.w = block_width;
 	target.h = block_height;
 
-	switch (obj.preMove) {
+	switch (obj->preMove) {
 		case UP:
-			target.y += (obj.moveCD) * block_width / TOTAL_TICK;
+			target.y += (obj->moveCD) * block_width / TOTAL_TICK;
 		break;
 		case DOWN:
-			target.y -= (obj.moveCD) * block_width / TOTAL_TICK;
+			target.y -= (obj->moveCD) * block_width / TOTAL_TICK;
 		break;
 		case LEFT:
-			target.x += (obj.moveCD) * block_width / TOTAL_TICK;
+			target.x += (obj->moveCD) * block_width / TOTAL_TICK;
 		break;
 		case RIGHT:
-			target.x -= (obj.moveCD) * block_width / TOTAL_TICK;
+			target.x -= (obj->moveCD) * block_width / TOTAL_TICK;
 		break;
 		case NONE:
 			break;

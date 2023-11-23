@@ -17,9 +17,8 @@ typedef struct Ghost Ghost;
 typedef struct Map Map;
 
 typedef struct Pacman{
-
-	bitmapdata imgdata;
 	object objData;
+	bitmapdata imgdata;
 	func_ptr move;
 	int speed;
 	bool powerUp;

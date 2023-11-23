@@ -73,7 +73,7 @@ void ghost_destory(Ghost* ghost) {
 }
 void ghost_draw(Ghost* ghost) {
 	// getDrawArea return the drawing RecArea defined by objData and GAME_TICK_CD
-	RecArea drawArea = getDrawArea(ghost->objData, GAME_TICK_CD);
+	RecArea drawArea = getDrawArea((object*)ghost, GAME_TICK_CD);
 
 	//Draw default image
 	al_draw_scaled_bitmap(ghost->move_sprite, 0, 0,

@@ -111,7 +111,7 @@ void pacman_draw(Pacman* pman) {
 		Draw Pacman and animations
 		hint: use pman->objData.moveCD to determine which frame of the animation to draw, you may refer to discription in ghost_draw in ghost.c
 	*/
-	RecArea drawArea = getDrawArea(pman->objData, GAME_TICK_CD);
+	RecArea drawArea = getDrawArea((object *)pman, GAME_TICK_CD);
 
 	//Draw default image
 	al_draw_scaled_bitmap(pman->move_sprite, 0, 0,
