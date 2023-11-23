@@ -50,51 +50,8 @@ const char* nthu_map[] = {
 	"####################################"
 };
 
-const char* default_map[] = {
-	"####################################",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                    BBB           #",
-	"#                    BBB           #",
-	"#                    BBB           #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"#                                  #",
-	"####################################",
-};
-
-
 Map* create_map(const char * filepath) {
-
-// [HACKATHON 0]
-// TODO: Read the map from "Assets/map_nthu.txt"
-// ~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~
-// Description: So for this part, you don't have to really finish them during hackathon.
-// You can just copy the map data in "map_nthu.txt" to the array `default_map`
-// Or just use the array `nthu_map` in your Map Data. 
-// But we suggest you to finish this part if you have time since this is one of 
-// the grading part in Basic part in Final_Project_Rules.
-/* ----------------------------- start of default map code*/
+	// * Read the map from "Assets/map_nthu.txt"
 
 	Map* M = (Map*)malloc(sizeof(Map));
 	FILE* pFile = NULL;
@@ -109,9 +66,9 @@ Map* create_map(const char * filepath) {
 		
 	}
 	else {
-		// [HACKATHON 0-1]
-		// use fopen to create a file FILE* type
-		// use pFile can fscanf do reading from file just like read from command line.
+		// TODO: use fopen to open a file stream
+		// fopen reference: https://man7.org/linux/man-pages/man3/fopen.3.html
+		// use pFile and fscanf to read from file, just like read from standard input.
 		/*
 		game_log("%s\n", filepath);
 		pFile = fopen(...);
@@ -128,8 +85,7 @@ Map* create_map(const char * filepath) {
 	}
 
 	/*
-	[TODO]
-	Allocate a 2-Dimension dynamic char array for recording Map 
+		Allocate a 2-Dimension dynamic char array for recording Map at M->map 
 	*/
 	M->map = (char**)malloc(sizeof(char*) * M->row_num);
 	if (!M->map) {
@@ -143,26 +99,18 @@ Map* create_map(const char * filepath) {
 			return NULL;
 		}
 	}
-	/*
-		[TODO]
-		read file to map[row][col] 
-		'#' -> wall
-		'.' -> beans
-		'B' -> room of ghost
-		'P' -> Power Pellets
-	*/
 
-	M->wallnum = M->beansCount = 0;
+	M->wallnum = M->beansCount = 0; // * Record the number of beans and walls, which can be used to print score or other usage.
 	for (int i = 0; i < M->row_num; i++) {
 		for (int j = 0; j < M->col_num; j++) {
 			if (filepath == NULL)
-			// [HACKATHON 0-1]
-			// You can just switch to nthu_map if you want to finish HACKATHON 0 later.
-				M->map[i][j] = default_map[i][j]; 
-			//	M->map[i][j] = nthu_map[i][j];
+				M->map[i][j] = nthu_map[i][j];
 			else
-				// [HACKATHON 0-2]
-				// read the map from file just like read from default_map
+				// TODO: input the map from file to M->map[row][col] 
+				// '#' -> wall
+				// '.' -> beans
+				// 'B' -> room of ghost
+				// 'P' -> Power Bean 
 				/*
 				fscanf(...);
 				*/
@@ -187,8 +135,7 @@ Map* create_map(const char * filepath) {
 void delete_map(Map* M) {
 	if (!M)
 		return;
-	// [TODO]
-	// you should free the dynamic allocated part of Map* M at here;
+	// TODO: free the dynamic allocated part of Map* M at here;
 	/*
 	if(M->map)
 	{
@@ -205,10 +152,7 @@ void draw_map(Map const* M) {
 		game_abort("error map!\n");
 		return;
 	}
-	/*
-		[TODO]
-		draw the map according to M->map
-	*/
+	// draw the map according to M->map
 	for (int row = 0; row < M->row_num; row++) {
 		for (int col = 0; col < M->col_num; col++) {
 			switch (M->map[row][col])
@@ -216,8 +160,7 @@ void draw_map(Map const* M) {
 				case '#':
 					draw_block_index(M, row, col);
 					break;
-				// [ TODO ]
-				// draw the power bean
+				// TODO-PB: draw the power bean
 				/*
 				case 'P':
 					draw_power_bean(...);
@@ -231,20 +174,6 @@ void draw_map(Map const* M) {
 			}
 		}
 	}
-	/*
-		for(...){
-			for(...)
-				switch(M->map[][])
-				{
-				case '#':
-					...
-				case '.': 
-					...
-				case 'P':
-					...
-				}
-		}
-	*/
 }
 
 static void draw_block_index(Map* M, const int row, const int col) {

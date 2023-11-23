@@ -49,8 +49,7 @@ static void init(void) {
 	game_main_Score = 0;
 	// create map
 	basic_map = create_map(NULL);
-	// [TODO]
-	// Create map from .txt file and design your own map !!
+	// TODO: Create map from .txt file so that you can design your own map!!
 	// basic_map = create_map("Assets/map_nthu.txt");
 	if (!basic_map) {
 		game_abort("error on creating map");
