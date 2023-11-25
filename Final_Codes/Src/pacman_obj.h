@@ -21,7 +21,7 @@ typedef struct Pacman{
 	bitmapdata imgdata;
 	func_ptr move;
 	int speed;
-	bool powerUp;
+	bool powerUp; // *important: this boolean indicates if pacman is in power bean mode now.
 	ALLEGRO_TIMER* death_anim_counter;
 	ALLEGRO_BITMAP* move_sprite;
 	ALLEGRO_BITMAP* die_sprite;

@@ -126,12 +126,9 @@ static void status_update(void) {
 	for (int i = 0; i < GHOST_NUM; i++) {
 		if (ghosts[i]->status == GO_IN)
 			continue;
-		// [TODO]
-		// use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect
-		// if pacman and ghosts collide with each other.
+		// TODO: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
 		// And perform corresponding operations.
-		// [NOTE]
-		// You should have some branch here if you want to implement power bean mode.
+		// [NOTE] You should have some if-else branch here if you want to implement power bean mode.
 		// Uncomment Following Code
 		/*
 		if(!cheat_mode and collision of pacman and ghost)
@@ -173,8 +170,7 @@ static void draw(void) {
 	al_clear_to_color(al_map_rgb(0, 0, 0));
 
 	
-	//	[TODO]
-	//	Draw scoreboard, something your may need is sprinf();
+	//	TODO-GC: Draw scoreboard, something your may need is sprinf();
 	/*
 		al_draw_text(...);
 	*/

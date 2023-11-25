@@ -62,10 +62,9 @@ Ghost* ghost_create(int flag) {
 	return ghost;
 }
 void ghost_destory(Ghost* ghost) {
-	/*
-		[TODO]
-		free ghost resource
+	// TODO: free ghost resource
 
+	/*
 		al_destory_bitmap(...);
 		...
 		free(ghost);
