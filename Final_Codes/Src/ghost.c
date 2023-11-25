@@ -72,7 +72,6 @@ void ghost_destory(Ghost* ghost) {
 	*/
 }
 void ghost_draw(Ghost* ghost) {
-	// getDrawArea return the drawing RecArea defined by objData and GAME_TICK_CD
 	RecArea drawArea = getDrawArea((object*)ghost, GAME_TICK_CD);
 
 	//Draw default image
@@ -82,31 +81,19 @@ void ghost_draw(Ghost* ghost) {
 		draw_region, draw_region, 0
 	);
 
-	/*
-		[TODO]
-		Draw ghost according to its status
-		hint : use ghost->objData.moveCD value to determine which frame of the animation to draw.
-
-			A not so good way is:
-
-			if(ghost->objData.moveCD % 16 == 0){
-				al_draw_scaled_bitmap(...);
-			}
-			else if(ghost->objData.moveCD % 16 == 1){
-				al_draw_scaled_bitmap(...);
-			}...
-
-			since modulo operation is expensive, better avoid using it.
-	*/
+	// TODO-GC: Draw ghost according to its status and use ghost->objData.moveCD value to determine which frame of the animation to draw.
+	// hint: please refer comments in pacman_draw 
+	// Since ghost has more status, we suggest you finish pacman_draw first. The logic is very similar.
 
 	int bitmap_x_offset = 0;
-	// [TODO] below is for animation usage, change the sprite you want to use.
 	if (ghost->status == FLEE) {
+		// *draw ghost->flee_sprite
 		/*
 			al_draw_scaled_bitmap(...)
 		*/
 	}
 	else if (ghost->status == GO_IN) {
+		// *draw ghost->dead_sprite
 		/*
 		switch (ghost->objData.facing)
 		{
@@ -115,6 +102,7 @@ void ghost_draw(Ghost* ghost) {
 		*/
 	}
 	else {
+		// *draw ghost->move_sprite
 		/*
 		switch (ghost->objData.facing)
 		{

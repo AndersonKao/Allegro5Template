@@ -84,7 +84,7 @@ Pacman* pacman_create() {
 	pman->objData.nextTryMove = NONE;
 	pman->speed = basic_speed;
 
-	pman->death_anim_counter = al_create_timer(1.0f / 64);
+	pman->death_anim_counter = al_create_timer(1.0f / 8.0f);
 	pman->powerUp = false;
 	/* load sprites */
 	pman->move_sprite = load_bitmap("Assets/pacman_move.png");
@@ -106,11 +106,8 @@ void pacman_destroy(Pacman* pman) {
 
 
 void pacman_draw(Pacman* pman) {
-	/*
-		[HW-TODO ]
-		Draw Pacman and animations
-		hint: use pman->objData.moveCD to determine which frame of the animation to draw, you may refer to discription in ghost_draw in ghost.c
-	*/
+	// TODO-GC: Draw Pacman and animations
+	// hint: use pman->objData.moveCD to determine which frame of the animation to draw
 	RecArea drawArea = getDrawArea((object *)pman, GAME_TICK_CD);
 
 	//Draw default image
@@ -121,19 +118,49 @@ void pacman_draw(Pacman* pman) {
 	);
 	
 	int offset = 0;
-	if (game_over) {
+	if (!game_over) {
+		// TODO-GC: We have two frames for each direction. You can use the value of pman->objData.moveCD to determine which frame of the animation to draw.
+		// For example, if the value if odd, draw 1st frame. Otherwise, draw 2nd frame.
+		// But this frame rate may be a little bit too high. We can use % 32 and draw 1st frame if value is 0~15, and 2nd frame if value is 16~31.
 		/*
-			hint: instead of using pman->objData.moveCD, use Pacman's death_anim_counter to create animation
+		if(pman->objData.moveCD % 2 == 0){
+			offset = 0
+		}
+		else if(pamn->objData.moveCD % 2 == 1){
+			offset = 16
+		}
+		*/
+		/*
+		NOTE: since modulo operation is expensive in clock cycle perspective (reference: https://stackoverflow.com/questions/27977834/why-is-modulus-operator-slow)
+			, you can use & (bitwise and) operator to determine a value is odd or even.
+			e.g. If (val & 1 == 1) is true then `val` is odd. If (val & 1 == 0) is false then `val` is even.
+			e.g. Similarly, if ((val>>4) & 1 == 0) is true then `val % 32` is 0~15, if ((val>>4) & 1 == 1) is true then `val % 32` is 16~31. 
+		*/
+		/*
+		switch(pman->objData.facing)
+		{
+		case LEFT:
+			al_draw_scaled_bitmap(pman->move_sprite, ... + offset, 0,
+				16, 16,
+				drawArea.x + fix_draw_pixel_offset_x, drawArea.y + fix_draw_pixel_offset_y,
+				draw_region, draw_region, 0
+			);
+			break;
+		case LEFT:
+			al_draw_scaled_bitmap(pman->move_sprite, ... + offset, 0,
+				16, 16,
+				drawArea.x + fix_draw_pixel_offset_x, drawArea.y + fix_draw_pixel_offset_y,
+				draw_region, draw_region, 0
+			);
+			break;
+		case ...
+		}
 		*/
 	}
 	else {
-		/*
-			switch(pman->objData.facing)
-			{
-			case LEFT:
-				...
-			}
-		*/
+		// TODO-GC: Draw die animation(pman->die_sprite)
+		// hint: instead of using pman->objData.moveCD, use pman->death_anim_counter to create animation.
+		// refer al_get_timer_count and al_draw_scaled_bitmap. Suggestion frame rate: 8fps.
 	}
 }
 void pacman_move(Pacman* pacman, Map* M) {

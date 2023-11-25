@@ -149,9 +149,12 @@ static void status_update(void) {
 static void update(void) {
 
 	if (game_over) {
+		// TODO: start pman->death_anim_counter and schedule a game-over event (e.g change scene to menu) after Pacman's death animation finished
+		// hint: refer al_get_timer_started(...), al_get_timer_count(...), al_stop_timer(...), al_rest(...)
 		/*
-			[TODO]
-			start pman->death_anim_counter and schedule a game-over event (e.g change scene to menu) after Pacman's death animation finished
+			// start the timer if it hasn't been started.
+			// check timer counter.
+			// stop the timer if counter reach desired time.
 			game_change_scene(...);
 		*/
 		return;
