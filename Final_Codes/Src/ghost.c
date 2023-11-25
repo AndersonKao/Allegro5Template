@@ -86,7 +86,7 @@ void ghost_draw(Ghost* ghost) {
 		draw_region, draw_region, 0
 	);
 
-	// TODO-GC: Draw ghost according to its status and use ghost->objData.moveCD value to determine which frame of the animation to draw.
+	// TODO-GC-animation: Draw ghost according to its status and use ghost->objData.moveCD value to determine which frame of the animation to draw.
 	// hint: please refer comments in pacman_draw 
 	// Since ghost has more status, we suggest you finish pacman_draw first. The logic is very similar.
 

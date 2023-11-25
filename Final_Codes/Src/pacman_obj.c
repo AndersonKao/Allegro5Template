@@ -106,7 +106,7 @@ void pacman_destroy(Pacman* pman) {
 
 
 void pacman_draw(Pacman* pman) {
-	// TODO-GC: Draw Pacman and animations
+	// TODO-GC-animation: Draw Pacman and animations
 	// hint: use pman->objData.moveCD to determine which frame of the animation to draw
 	RecArea drawArea = getDrawArea((object *)pman, GAME_TICK_CD);
 
@@ -119,7 +119,7 @@ void pacman_draw(Pacman* pman) {
 	
 	int offset = 0;
 	if (!game_over) {
-		// TODO-GC: We have two frames for each direction. You can use the value of pman->objData.moveCD to determine which frame of the animation to draw.
+		// TODO-GC-animation: We have two frames for each direction. You can use the value of pman->objData.moveCD to determine which frame of the animation to draw.
 		// For example, if the value if odd, draw 1st frame. Otherwise, draw 2nd frame.
 		// But this frame rate may be a little bit too high. We can use % 32 and draw 1st frame if value is 0~15, and 2nd frame if value is 16~31.
 		/*
@@ -158,7 +158,7 @@ void pacman_draw(Pacman* pman) {
 		*/
 	}
 	else {
-		// TODO-GC: Draw die animation(pman->die_sprite)
+		// TODO-GC-animation: Draw die animation(pman->die_sprite)
 		// hint: instead of using pman->objData.moveCD, use pman->death_anim_counter to create animation.
 		// refer al_get_timer_count and al_draw_scaled_bitmap. Suggestion frame rate: 8fps.
 	}
