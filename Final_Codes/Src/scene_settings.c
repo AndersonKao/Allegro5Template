@@ -1,5 +1,4 @@
-// [HACKATHON 3-9]
-// TODO: Create scene_settings.h and scene_settings.c.
+// TODO-HACKATHON 3-9: Create scene_settings.h and scene_settings.c.
 // No need to do anything for this part. We've already done it for
 // you, so this 2 files is like the default scene template.
 #include "scene_settings.h"
@@ -11,7 +10,7 @@
 
 /* Define your static vars / function prototypes below. */
 
-// TODO: More variables and functions that will only be accessed
+// TODO-IF: More variables and functions that will only be accessed
 // inside this scene. They should all have the 'static' prefix.
 
 static void draw(void ){
@@ -23,7 +22,7 @@ Scene scene_settings_create(void) {
 	memset(&scene, 0, sizeof(Scene));
 	scene.name = "Settings";
 	scene.draw = &draw;
-	// TODO: Register more event callback functions such as keyboard, mouse, ...
+	// TODO-IF: Register more event callback functions such as keyboard, mouse, ...
 	game_log("Settings scene created");
 	return scene;
 }

@@ -19,8 +19,7 @@ static void ghost_move_script_GO_OUT(Ghost* ghost, Map* M);
 static void ghost_move_script_FLEE(Ghost* ghost, Map* M, const Pacman* const pacman);
 
 static void ghost_move_script_FREEDOM_random(Ghost* ghost, Map* M) {
-	// [HACKATHON 2-4]
-	// TODO: Uncomment the following code and finish pacman picking random direction.
+	// TODO-HACKATHON 2-4: Uncomment the following code and finish pacman picking random direction.
 	// hint: see generateRandomNumber in utility.h
 
 	/*

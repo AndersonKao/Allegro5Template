@@ -75,8 +75,7 @@ bool movetime(int speed);
 uint32_t generateRandomNumber(uint32_t a, uint32_t b);
 double generateRandomFloat(void);
 bool bernoulliTrail(double p); // Given a Possibility and decided if occur.
-// [HACKATHON 3-4]
-// TODO: Declare a function.
+// TODO-HACKATHON 3-4: Declaration of pnt_int_rect 
 // Determines whether the point (px, py) is in rect (x, y, w, h).
 // Uncomment the code below.
 /*
@@ -85,5 +84,5 @@ bool pnt_in_rect(int px, int py, RecArea field);
 // -------------------------
 
 
-// TODO: More functions that can be reused across different scenes.
+// TODO-IF: More functions that can be shared across different scenes.
 #endif

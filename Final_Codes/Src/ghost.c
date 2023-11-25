@@ -68,7 +68,7 @@ Ghost* ghost_create(int flag) {
 	return ghost;
 }
 void ghost_destory(Ghost* ghost) {
-	// TODO: free ghost resource
+	// TODO-GC-memory: free ghost resource
 
 	/*
 		al_destory_bitmap(...);
@@ -146,8 +146,7 @@ void printGhostStatus(GhostStatus S) {
 	}
 }
 bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room) {
-	// [HACKATHON 2-3]
-	// TODO: Determine if the current direction is movable.
+	// TODO-HACKATHON 2-3: Determine if the current direction is movable.
 	// Basically, this is a ghost version of `pacman_movable`.
 	// So if you have finished (and you should), you can just "copy and paste"
 	// and do some small alternation.

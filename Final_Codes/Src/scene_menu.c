@@ -24,16 +24,14 @@ static int gameTitleH ;
 // For `Button` struct(object) is defined in `scene_menu_object.h` and `scene_menu_object.c`
 // STRONGLY recommend you trace both of them first. 
 
-//	[HACKATHON 3-1]
-//	TODO: Declare variable for button
-//	Uncomment and fill the code below
+// TODO-HACKATHON 3-1: Declare variable for button
+// Uncomment and fill the code below
 // static ... btnSettings;
 
 static void init() {
 
-	// [HACKATHON 3-2]
-	// TODO: Create button to settings
-	//	Uncomment and fill the code below
+	// TODO-HACKATHON 3-2: Create button to settings
+	// Uncomment and fill the code below
 	//btnSettings = button_create(730, 20, 50, 50, "...", "...");
 
 	gameTitle = load_bitmap("Assets/title.png");
@@ -71,23 +69,20 @@ static void draw() {
 		"PRESS \"ENTER\""
 	);
 
-		// [HACKATHON 3-3]
-		// TODO: Draw button
+		// TODO-HACKATHON 3-3: Draw button
 		// Uncomment and fill the code below
 		// drawButton(...);
 
 }
 
 static void on_mouse_move(int a, int mouse_x, int mouse_y, int f) {
-	//	[HACKATHON 3-7]
-	//	TODO: Update button's status(hovered), and utilize the function `pnt_in_rect`, which you just implemented
+	//	TODO-HACKATHON 3-7: Update button's status(hovered), and utilize the function `pnt_in_rect`, which you just implemented
 	//	Uncomment and fill the code below
 	//	 btnSettings.hovered = ???(btnSettings, mouse_x, mouse_y);
 }
 
 
-//	[HACKATHON 3-8]
-//	TODO: When btnSettings clicked, switch to settings scene
+//	TODO-HACKATHON 3-8: When btnSettings clicked, switch to settings scene
 //  `game_change_scene` is defined in `game.h`.
 //  You can check line 121 `scene_menu.c` to see how to use this function.
 //  And find the corresponding function for `scene_setting`
@@ -106,8 +101,7 @@ static void on_mouse_down() {
 static void destroy() {
 	stop_bgm(menuBGM);
 	al_destroy_bitmap(gameTitle);
-	//	[HACKATHON 3-10]
-	//	TODO: Destroy button images
+	//	TODO-HACKATHON 3-10: Destroy button images
 	//	Uncomment and fill the code below
 	/*
 	al_destroy_bitmap(...);
@@ -126,7 +120,7 @@ static void on_key_down(int keycode) {
 	}
 }
 
-// TODO: Add more event callback functions such as update, ...
+// TODO-IF: Add more event callback functions such as update, ...
 
 // Functions without 'static', 'extern' prefixes is just a normal
 // function, they can be accessed by other files using 'extern'.
@@ -143,8 +137,7 @@ Scene scene_menu_create(void) {
 	scene.destroy = &destroy;
 	scene.on_key_down = &on_key_down;
 	scene.on_mouse_move = &on_mouse_move;
-	// [HACKATHON 3-9]
-	// TODO: Register on_mouse_down.
+	// TODO-HACKATHON 3-9: Register on_mouse_down.
 	// Uncomment the code below.
 	/*
 	scene.on_mouse_down = &on_mouse_down;
@@ -153,7 +146,7 @@ Scene scene_menu_create(void) {
 
 
 
-	// TODO: Register more event callback functions such as keyboard, mouse, ...
+	// TODO-IF: Register more event callback functions such as keyboard, mouse, ...
 	game_log("Menu scene created");
 	return scene;
 }

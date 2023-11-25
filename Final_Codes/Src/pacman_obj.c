@@ -25,8 +25,7 @@ extern float effect_volume;
 
 /* Declare static function */
 static bool pacman_movable(Pacman* pacman, Map* M, Directions targetDirec) {
-	// [HACKATHON 1-2]
-	// TODO: Determine if the current direction is movable.
+	// TODO-HACKATHON 1-2: Determine if the current direction is movable.
 	// That is to say, your pacman shouldn't penetrate 'wall' and 'room'
 	// , where room is reserved for ghost to set up.
 	// 1) For the current direction `targetDirec`, use pre-implemented function
@@ -58,23 +57,10 @@ static bool pacman_movable(Pacman* pacman, Map* M, Directions targetDirec) {
 }
 
 Pacman* pacman_create() {
-
-	/*
-		[TODO]
-		Allocate dynamic memory for pman pointer;
-	*/
+	// Allocate dynamic memory for pman pointer;
 	Pacman* pman = (Pacman*)malloc(sizeof(Pacman));
 	if (!pman)
 		return NULL;
-	/*
-		Pacman* pman = ...
-		if(!pman)
-			return NULL;
-	*/
-	/* Init pman data */
-	/* set starting point, Size, */
-	/* TODO? */
-	/* hint / just put it */
 	pman->objData.Coord.x = 24;
 	pman->objData.Coord.y = 24;
 	pman->objData.Size.x = block_width;
@@ -93,10 +79,9 @@ Pacman* pacman_create() {
 
 }
 
-void pacman_destroy(Pacman* pman) {
+void pacman_destroy(Pacman* pman) {	
+	// TODO-GC-memory: free pacman resource
 	/*
-		[TODO]
-		free pacman resource
 		al_destroy_bitmap(pman->...);
 		al_destroy_timer(pman->...);
 		...

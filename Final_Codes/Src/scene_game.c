@@ -49,7 +49,7 @@ static void init(void) {
 	game_main_Score = 0;
 	// create map
 	basic_map = create_map(NULL);
-	// TODO: Create map from .txt file so that you can design your own map!!
+	// TODO-GC-read_txt: Create map from .txt file so that you can design your own map!!
 	// basic_map = create_map("Assets/map_nthu.txt");
 	if (!basic_map) {
 		game_abort("error on creating map");
@@ -61,8 +61,7 @@ static void init(void) {
 	}
 	
 	// allocate ghost memory
-	// [HACKATHON 2-1]
-	// TODO: Allocate dynamic memory for ghosts array.
+	// TODO-HACKATHON 2-1: Allocate dynamic memory for ghosts array.
 	/*
 	ghosts = (...)malloc(sizeof(...) * GHOST_NUM)
 	*/
@@ -70,8 +69,7 @@ static void init(void) {
 		game_log("We haven't create any ghosts!\n");
 	}
 	else {
-		// [HACKATHON 2-2]
-		// TODO: create a ghost.
+		// TODO-HACKATHON 2-2: create a ghost.
 		// Try to look the definition of ghost_create and figure out what should be placed here.
 		for (int i = 0; i < GHOST_NUM; i++) {
 			/*
@@ -104,8 +102,7 @@ static void checkItem(void) {
 	int Grid_x = pman->objData.Coord.x, Grid_y = pman->objData.Coord.y;
 	if (Grid_y >= basic_map->row_num - 1 || Grid_y <= 0 || Grid_x >= basic_map->col_num - 1 || Grid_x <= 0)
 		return;
-	// [HACKATHON 1-3]
-	// TODO: check which item you are going to eat and use `pacman_eatItem` to deal with it.
+	// TODO-HACKATHON 1-3: check which item you are going to eat and use `pacman_eatItem` to deal with it.
 	/*
 	switch (basic_map->map...)
 	{
@@ -115,9 +112,8 @@ static void checkItem(void) {
 		break;
 	}
 	*/
-	// [HACKATHON 1-4]
-	// erase the item you eat from map
-	// be careful no erasing the wall block.
+	// TODO-HACKATHON 1-4: erase the item you eat from map
+	// Be careful, don't erase the wall block.
 	/*
 		basic_map->map...;
 	*/
@@ -126,7 +122,7 @@ static void status_update(void) {
 	for (int i = 0; i < GHOST_NUM; i++) {
 		if (ghosts[i]->status == GO_IN)
 			continue;
-		// TODO: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
+		// TODO-GC-game_over: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
 		// And perform corresponding operations.
 		// [NOTE] You should have some if-else branch here if you want to implement power bean mode.
 		// Uncomment Following Code
@@ -146,7 +142,7 @@ static void status_update(void) {
 static void update(void) {
 
 	if (game_over) {
-		// TODO: start pman->death_anim_counter and schedule a game-over event (e.g change scene to menu) after Pacman's death animation finished
+		// TODO-GC-game_over: start pman->death_anim_counter and schedule a game-over event (e.g change scene to menu) after Pacman's death animation finished
 		// hint: refer al_get_timer_started(...), al_get_timer_count(...), al_stop_timer(...), al_rest(...)
 		/*
 			// start the timer if it hasn't been started.
@@ -170,7 +166,7 @@ static void draw(void) {
 	al_clear_to_color(al_map_rgb(0, 0, 0));
 
 	
-	//	TODO-GC: Draw scoreboard, something your may need is sprinf();
+	// TODO-GC-scoring: Draw scoreboard, something your may need is sprinf();
 	/*
 		al_draw_text(...);
 	*/
@@ -220,17 +216,13 @@ static void printinfo(void) {
 
 
 static void destroy(void) {
-	/*
-		[TODO]
-		free map array, Pacman and ghosts
-	*/
+	// TODO-GC-memory: free map array, Pacman and ghosts
 }
 
 static void on_key_down(int key_code) {
 	switch (key_code)
 	{
-		// [HACKATHON 1-1]	
-		// TODO: Use allegro pre-defined enum ALLEGRO_KEY_<KEYNAME> to controll pacman movement
+		// TODO-HACKATHON 1-1: Use allegro pre-defined enum ALLEGRO_KEY_<KEYNAME> to controll pacman movement
 		// we provided you a function `pacman_NextMove` to set the pacman's next move direction.
 		/*
 		case ALLEGRO_KEY_W:
@@ -303,7 +295,7 @@ Scene scene_main_create(void) {
 	scene.destroy = &destroy;
 	scene.on_key_down = &on_key_down;
 	scene.on_mouse_down = &on_mouse_down;
-	// TODO: Register more event callback functions such as keyboard, mouse, ...
+	// TODO-IF: Register more event callback functions such as keyboard, mouse, ...
 	game_log("Start scene created");
 	return scene;
 }

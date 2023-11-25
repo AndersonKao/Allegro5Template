@@ -32,7 +32,7 @@ typedef void(*func_ptr)(void);
 typedef void(*script_func_ptr)(Ghost* ghost, Map*M, Pacman* pacman);
 typedef void(*func_ptr_keyboard)(int keycode);
 typedef void(*func_ptr_mouse)(int btn, int x, int y, int dz);
-// TODO: More function pointer typedefs for other events.
+// TODO-IF: More function pointer typedefs for other events.
 
 // Structure containing all scene functions / event callbacks.
 typedef struct {
@@ -47,7 +47,7 @@ typedef struct {
 	func_ptr_mouse on_mouse_move;
 	func_ptr_mouse on_mouse_up;
 	func_ptr_mouse on_mouse_scroll;
-	// TODO: More event callbacks such as timer tick, video finished, ...
+	// TODO-IF: More event callbacks such as timer tick, video finished, ...
 } Scene;
 
 // Frame rate (frame per second)
@@ -71,7 +71,7 @@ extern bool key_state[ALLEGRO_KEY_MAX];
 extern bool* mouse_state;
 // Mouse position.
 extern int mouse_x, mouse_y;
-// TODO: More variables to store input states such as joysticks, ...
+// TODO-IF: More variables to store input states such as joysticks, ...
 
 /* Function prototypes */
 
