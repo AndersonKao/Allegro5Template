@@ -54,9 +54,6 @@ bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room);
 
 void ghost_toggle_FLEE(Ghost* ghosts, bool setFLEE);
 void ghost_collided(Ghost* ghost);
-void ghost_move_script_GO_IN(Ghost* ghost, Map* M);
-void ghost_move_script_GO_OUT(Ghost* ghost, Map* M);
-void ghost_move_script_FLEE(Ghost* ghost, Map* M, const Pacman * const pacman);
-
-void ghost_red_move_script(Ghost* ghost, Map* M, Pacman* pacman);
+void ghost_move_script_random(Ghost* ghost, Map* M, Pacman* pacman);
+void ghost_move_script_shortest_path(Ghost* ghost, Map* M, Pacman* pacman);
 #endif

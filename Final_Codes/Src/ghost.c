@@ -50,13 +50,19 @@ Ghost* ghost_create(int flag) {
 		ghost->objData.Coord.x = cage_grid_x;
 		ghost->objData.Coord.y = cage_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_red.png");
-		ghost->move_script = &ghost_red_move_script;
+		ghost->move_script = &ghost_move_script_random;
 		break;
+	case Pinky:
+		// *load move script of shortest_path
+		ghost->objData.Coord.x = cage_grid_x;
+		ghost->objData.Coord.y = cage_grid_y;
+		ghost->move_sprite = load_bitmap("Assets/ghost_move_pink.png");
+		ghost->move_script = &ghost_move_script_shortest_path;
 	default:
 		ghost->objData.Coord.x = cage_grid_x;
 		ghost->objData.Coord.y = cage_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_red.png");
-		ghost->move_script = &ghost_red_move_script;
+		ghost->move_script = &ghost_move_script_random;
 		break;
 	}
 	return ghost;
@@ -149,7 +155,7 @@ bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room) {
 	/*
 	... ghost->objData.Coord.x, ... ghost->objData.Coord.y;
 
-	switch (targetDirec)
+	switch (targetDirec) 
 	{
 	case UP:
 		...
@@ -173,23 +179,24 @@ bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room) {
 }
 
 void ghost_toggle_FLEE(Ghost* ghost, bool setFLEE) {
-	// [TODO]
-	// TODO: Here is reserved for power bean implementation.
-	// The concept is "When pacman eats the power bean, only
-	// ghosts who are in state FREEDOM will change to state FLEE.
-	// For those who are not (BLOCK, GO_IN, etc.), they won't change state."
+	// TODO-PB: change ghosts state when power bean is eaten by pacman.
+	// When pacman eats the power bean, only ghosts who are in state FREEDOM will change to state FLEE.
+	// For those who are not (BLOCK, GO_IN, etc.), they won't change state.
 	// This implementation is based on the classic PACMAN game.
-	// You are allowed to do your own implementation of power bean system.
 	/*
-		if(setFLEE){
-			if(... == FREEDOM){
-				... = FLEE;
-				... speed = ...
-			}
-		}else{
-			if(... == FLEE)
-				..
+	if(setFLEE){
+		// set FREEDOM ghost's status to FLEE and make them slow 
+		if(... == FREEDOM){
+			...
+			ghost->speed = 1;
 		}
+	}else{
+		// set FLEE ghost's status to FREESOME and them down
+		if(... == FLEE){
+			...
+			ghost->speed = 2;
+		}
+	}
 	*/
 }
 
@@ -198,33 +205,5 @@ void ghost_collided(Ghost* ghost) {
 		ghost->status = GO_IN;
 		ghost->speed = 4;
 	}
-}
-
-void ghost_move_script_GO_IN(Ghost* ghost, Map* M) {
-	// Description
-	// `shortest_path_direc` is a function that returns the direction of shortest path.
-	// Check `map.c` for its detail usage.
-	// For GO_IN state.
-	ghost->objData.nextTryMove = shortest_path_direc(M, ghost->objData.Coord.x, ghost->objData.Coord.y, cage_grid_x, cage_grid_y);
-}
-void ghost_move_script_GO_OUT(Ghost* ghost, Map* M) {
-	// Description
-	// Here we always assume the room of ghosts opens upward.
-	// And used a greedy method to drag ghosts out of room.
-	// You should modify here if you have different implementation/design of room.
-	if(M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') 
-		ghost_NextMove(ghost, UP);
-	else
-		ghost->status = FREEDOM;
-}
-void ghost_move_script_FLEE(Ghost* ghost, Map* M, const Pacman * const pacman) {
-	// [TODO]
-	Directions shortestDirection = shortest_path_direc(M, ghost->objData.Coord.x, ghost->objData.Coord.y, pacman->objData.Coord.x, pacman->objData.Coord.y);
-	// Description:
-	// The concept here is to simulate ghosts running away from pacman while pacman is having power bean ability.
-	// To achieve this, think in this way. We first get the direction to shortest path to pacman, call it K (K is either UP, DOWN, RIGHT or LEFT).
-	// Then we choose other available direction rather than direction K.
-	// In this way, ghost will escape from pacman.
-
 }
 

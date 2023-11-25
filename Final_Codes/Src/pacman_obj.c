@@ -219,8 +219,3 @@ void pacman_die() {
 	stop_bgm(PACMAN_MOVESOUND_ID);
 	PACMAN_MOVESOUND_ID = play_audio(PACMAN_DEATH_SOUND, effect_volume);
 }
-
-
-
-
-
