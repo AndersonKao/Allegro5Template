@@ -97,15 +97,15 @@ void setRecArea(RecArea* RA, float x, float y, float w, float h) {
 	RA->w = w;
 	RA->h = h;
 }
-// Hakathon
-bool RecAreaOverlap(const RecArea RA,const RecArea RB) {
-	// [TODO]
+
+bool RecAreaOverlap(const RecArea *const RA, const RecArea *const RB) {
 	// Detect if two RecArea is overlapped.
-	float RA_x2 = RA.x + RA.w;
-	float RA_y2 = RA.y + RA.h;
-	float RB_x2 = RB.x + RB.w;
-	float RB_y2 = RB.y + RB.h;
-	if ((fmin(RA_x2, RB_x2) > fmax(RA.x, RB.x)) && (fmin(RA_y2, RB_y2) > fmax(RA.y, RB.y)))
+	// reference: https://stackoverflow.com/questions/21476869/constant-pointer-vs-pointer-to-constant
+	float RA_x2 = RA->x + RA->w;
+	float RA_y2 = RA->y + RA->h;
+	float RB_x2 = RB->x + RB->w;
+	float RB_y2 = RB->y + RB->h;
+	if ((fmin(RA_x2, RB_x2) > fmax(RA->x, RB->x)) && (fmin(RA_y2, RB_y2) > fmax(RA->y, RB->y)))
 		return true;
 	return false;
 }

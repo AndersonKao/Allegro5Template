@@ -68,7 +68,7 @@ typedef struct bitmapdata{
 
 void setRecArea(RecArea *RA, float x, float y, float w, float h);
 RecArea getDrawArea(object *obj, uint32_t TICK);
-bool RecAreaOverlap(const RecArea RA,const RecArea RB);
+bool RecAreaOverlap(const RecArea *const RA, const RecArea *const RB);
 void printRecAreaInfo(const RecArea *RA);
 void printDirection(const Directions a);
 bool movetime(int speed);
