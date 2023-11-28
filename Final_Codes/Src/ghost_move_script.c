@@ -136,7 +136,7 @@ void ghost_move_script_random(Ghost* ghost, Map* M, Pacman* pacman) {
 			ghost_move_script_GO_IN(ghost, M);
 			if (M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') {
 				ghost->status = GO_OUT;
-				ghost->speed = 2;
+				ghost->speed = 2; // reset the speed after back to the cage.
 			}
 			break;
 		case FLEE:
@@ -196,7 +196,7 @@ void ghost_move_script_shortest_path(Ghost* ghost, Map* M, Pacman* pacman) {
 			ghost_move_script_GO_IN(ghost, M);
 			if (M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') {
 				ghost->status = GO_OUT;
-				ghost->speed = 2;
+				ghost->speed = 2; // reset the speed after back to the cage.
 			}
 			break;
 		case FLEE:

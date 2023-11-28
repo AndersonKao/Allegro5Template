@@ -45,6 +45,8 @@ Ghost* ghost_create(int flag) {
 	ghost->flee_sprite = load_bitmap("Assets/ghost_flee.png");
 	ghost->dead_sprite = load_bitmap("Assets/ghost_dead.png");
 
+	// TODO-GC-ghost: Create other type ghost, load corresponding sprites.
+	// TODO-IF: You may design your own special tracking rules.
 	switch (ghost->typeFlag) {
 	case Blinky:
 		ghost->objData.Coord.x = cage_grid_x;
@@ -93,8 +95,23 @@ void ghost_draw(Ghost* ghost) {
 	int bitmap_x_offset = 0;
 	if (ghost->status == FLEE) {
 		// *draw ghost->flee_sprite
+		/* hint: try to add some function in scene_game.h and scene_game.c that
+			gets the value of `power_up_timer` and `power_up_duration`.
+		*/ 
 		/*
-			al_draw_scaled_bitmap(...)
+			if (it has run out of 70% of the time of power mode  )
+			{
+				// alternately draw blue and white sprites
+				if (ghost->objData.moveCD >> 4)& 1) {
+					bitmap_x_offset = ...;
+				}
+				al_draw_scaled_bitmap(...)
+			}
+			else 
+			{
+				// draw only blue sprited
+				al_draw_scaled_bitmap(...)
+			}
 		*/
 	}
 	else if (ghost->status == GO_IN) {
@@ -181,7 +198,8 @@ void ghost_toggle_FLEE(Ghost* ghost, bool setFLEE) {
 	// TODO-PB: change ghosts state when power bean is eaten by pacman.
 	// When pacman eats the power bean, only ghosts who are in state FREEDOM will change to state FLEE.
 	// For those who are not (BLOCK, GO_IN, etc.), they won't change state.
-	// This implementation is based on the classic PACMAN game.
+	// Spec above is based on the classic PACMAN game.
+	// setFLEE = true => set to FLEE, setFLEE = false => reset to FREEDOM
 	/*
 	if(setFLEE){
 		// set FREEDOM ghost's status to FLEE and make them slow 
@@ -202,7 +220,7 @@ void ghost_toggle_FLEE(Ghost* ghost, bool setFLEE) {
 void ghost_collided(Ghost* ghost) {
 	if (ghost->status == FLEE) {
 		ghost->status = GO_IN;
-		ghost->speed = 4;
+		ghost->speed = 4; // Go back to cage faster
 	}
 }
 

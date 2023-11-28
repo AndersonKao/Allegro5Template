@@ -11,9 +11,10 @@
 #include "map.h"
 
 
-// [HACKATHON 2-0]
+// TODO-HACKATHON 2-0: Create one ghost
 // Just modify the GHOST_NUM to 1
 #define GHOST_NUM 0 
+// TODO-GC-ghost: create a least FOUR ghost!
 /* global variables*/
 extern const uint32_t GAME_TICK_CD;
 extern uint32_t GAME_TICK;
@@ -70,7 +71,7 @@ static void init(void) {
 	}
 	else {
 		// TODO-HACKATHON 2-2: create a ghost.
-		// Try to look the definition of ghost_create and figure out what should be placed here.
+		// Try to look the definition of ghost_create in ghost.h and figure out what should be placed here.
 		for (int i = 0; i < GHOST_NUM; i++) {
 			/*
 			game_log("creating ghost %d\n", i);
@@ -83,7 +84,7 @@ static void init(void) {
 	GAME_TICK = 0;
 
 	render_init_screen();
-	power_up_timer = al_create_timer(1.0f); // 1 tick / sec
+	power_up_timer = al_create_timer(1.0f); // 1 tick per second
 	if (!power_up_timer)
 		game_abort("Error on create timer\n");
 	return ;
@@ -108,6 +109,12 @@ static void checkItem(void) {
 	{
 	case '.':
 		pacman_eatItem(...);
+	case 'P':
+		// TODO-GC-PB: ease power bean
+		// pacman_eatItem(...);
+		// stop and reset power_up_timer value
+		// start the timer
+		break;
 	default:
 		break;
 	}
@@ -119,23 +126,48 @@ static void checkItem(void) {
 	*/
 }
 static void status_update(void) {
+	// TODO-PB: check powerUp duration
+	/*
+	if (pman->powerUp)
+	{
+		// Check the value of power_up_timer
+		// If runs out of time reset all relevant variables and ghost's status
+		// hint: ghost_toggle_FLEE
+	}
+	*/
+
+
 	for (int i = 0; i < GHOST_NUM; i++) {
-		if (ghosts[i]->status == GO_IN)
+		if (ghosts[i]->status == GO_IN){
 			continue;
-		// TODO-GC-game_over: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
-		// And perform corresponding operations.
-		// [NOTE] You should have some if-else branch here if you want to implement power bean mode.
-		// Uncomment Following Code
-		/*
-		if(!cheat_mode and collision of pacman and ghost)
-		{
-			game_log("collide with ghost\n");
-			al_rest(1.0);
-			pacman_die();
-			game_over = true;
-			break;
 		}
-		*/
+		else if (ghost[i]->status == FREEDOM)
+		{
+			// TODO-GC-game_over: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
+			// And perform corresponding operations.
+			// [NOTE] You should have some if-else branch here if you want to implement power bean mode.
+			// Uncomment Following Code
+			/*
+			if(!cheat_mode and collision of pacman and ghost)
+			{
+					game_log("collide with ghost\n");
+					al_rest(1.0);
+					pacman_die();
+					game_over = true;
+					break; // animation shouldn't be trigger twice.
+			}
+			*/
+		}
+		else if (ghost[i]->status == FLEE)
+		{
+			// TODO-GC-PB: if ghost is collided by pacman, it should go back to the cage immediately and come out after a period.
+			/*
+			if(!cheat_mode and collision of pacman and ghost)
+			{
+				ghost_collided(...)
+			}
+			*/
+		}
 	}
 }
 

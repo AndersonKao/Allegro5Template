@@ -7,5 +7,9 @@
 #include "game.h"
 
 Scene scene_main_create(void);
+/*
+int get_power_up_timer_tick();
+int get_power_up_duration();
+*/
 
 #endif

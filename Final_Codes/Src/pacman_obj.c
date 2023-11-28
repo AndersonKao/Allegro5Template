@@ -191,6 +191,12 @@ void pacman_eatItem(Pacman* pacman, const char Item) {
 		stop_bgm(PACMAN_MOVESOUND_ID);
 		PACMAN_MOVESOUND_ID = play_audio(PACMAN_MOVESOUND, effect_volume);
 		break;
+	// TODO-GC-PB: set pacman powerUp mode
+	/*
+	case 'P':
+		...
+		break;
+	*/
 	default:
 		break;
 	}
@@ -201,6 +207,6 @@ void pacman_NextMove(Pacman* pacman, Directions next) {
 }
 
 void pacman_die() {
-	stop_bgm(PACMAN_MOVESOUND_ID);
-	PACMAN_MOVESOUND_ID = play_audio(PACMAN_DEATH_SOUND, effect_volume);
+	// TODO-GC-game_over: play sound of pacman's death! see shared.c
+	// hint: check pacman_eatItem(...) above.
 }
