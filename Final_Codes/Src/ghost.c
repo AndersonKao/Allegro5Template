@@ -88,12 +88,14 @@ void ghost_draw(Ghost* ghost) {
 		draw_region, draw_region, 0
 	);
 
-	// TODO-GC-animation: Draw ghost according to its status and use ghost->objData.moveCD value to determine which frame of the animation to draw.
+	// Draw ghost according to its status and use ghost->objData.moveCD value to determine which frame of the animation to draw.
 	// hint: please refer comments in pacman_draw 
 	// Since ghost has more status, we suggest you finish pacman_draw first. The logic is very similar.
 
 	int bitmap_x_offset = 0;
 	if (ghost->status == FLEE) {
+		// TODO-PB-animation: ghost FLEE animation, draw blue flee sprites,
+		//						 while time is running out, alternatively draw blue and white flee sprites.
 		// *draw ghost->flee_sprite
 		/* hint: try to add some function in scene_game.h and scene_game.c that
 			gets the value of `power_up_timer` and `power_up_duration`.
@@ -109,12 +111,13 @@ void ghost_draw(Ghost* ghost) {
 			}
 			else 
 			{
-				// draw only blue sprited
+				// draw only blue sprite
 				al_draw_scaled_bitmap(...)
 			}
 		*/
 	}
 	else if (ghost->status == GO_IN) {
+		// TODO-PB-animation: ghost going animation
 		// *draw ghost->dead_sprite
 		/*
 		switch (ghost->objData.facing)
@@ -124,6 +127,7 @@ void ghost_draw(Ghost* ghost) {
 		*/
 	}
 	else {
+		// TODO-GC-animation: ghost animation
 		// *draw ghost->move_sprite
 		/*
 		switch (ghost->objData.facing)
