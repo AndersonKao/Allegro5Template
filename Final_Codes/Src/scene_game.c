@@ -141,7 +141,7 @@ static void status_update(void) {
 		if (ghosts[i]->status == GO_IN){
 			continue;
 		}
-		else if (ghost[i]->status == FREEDOM)
+		else if (ghosts[i]->status == FREEDOM)
 		{
 			// TODO-GC-game_over: use `getDrawArea(..., GAME_TICK_CD)` and `RecAreaOverlap(..., GAME_TICK_CD)` functions to detect if pacman and ghosts collide with each other.
 			// And perform corresponding operations.
@@ -158,7 +158,7 @@ static void status_update(void) {
 			}
 			*/
 		}
-		else if (ghost[i]->status == FLEE)
+		else if (ghosts[i]->status == FLEE)
 		{
 			// TODO-GC-PB: if ghost is collided by pacman, it should go back to the cage immediately and come out after a period.
 			/*
