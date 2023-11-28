@@ -12,7 +12,7 @@ extern const int cage_grid_x, cage_grid_y;
 /* Declare static function prototypes */
 // static function reference: https://stackoverflow.com/questions/558122/what-is-a-static-function-in-c
 static void ghost_move_script_FREEDOM_random(Ghost* ghost, Map* M);
-static void ghost_move_script_FREEDOM_shortest_path(Ghost* ghost, Map* M);
+static void ghost_move_script_FREEDOM_shortest_path(Ghost* ghost, Map* M, Pacman* pman);
 static void ghost_move_script_BLOCKED(Ghost* ghost, Map* M);
 static void ghost_move_script_GO_IN(Ghost* ghost, Map* M);
 static void ghost_move_script_GO_OUT(Ghost* ghost, Map* M);
