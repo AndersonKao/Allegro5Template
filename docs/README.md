@@ -2,6 +2,7 @@
 
 > Images in this page are not updated, but most of them are just difference on version. 
 
+- [Linux(Debian)](#linuxdebian)
 - [Windows](#windows)
   - [Visual Studio](#visual-studio)
   - [Code::Blocks](#codeblocks)
@@ -23,14 +24,29 @@ Then go the the Allegro5 github page to find the matched version of pre-built bi
 
 ![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
 
+### Linux(Debian)
+
+Install Allegro5 by following the [official guide](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
+
+```shell
+cd Final_Codes
+make
+./pacman
+```
+
+To clean object files and executable file, type:
+
+```shell
+make clean
+```
 
 ### Windows
 
 #### Visual Studio
 
-**This year we highly recommend you use visual studio 2019**
+**This year we highly recommend you use visual studio 2022**
 
-If you use the release VS2019, open it with Visual Studio 2019 will be enough.
+If you use the release VS2022, open it with Visual Studio 2022 will be enough.
 
 Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
 
