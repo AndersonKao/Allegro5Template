@@ -12,6 +12,7 @@ Related Links:
 
 Follow the steps [here](docs/README.md).
 
+- [Official Guide](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
 - [Windows](docs/README.md#windows)
   - [Visual Studio](docs/README.md#visual-studio): [Video](https://youtu.be/HPHd92nj0Io)
   - [Code::Blocks](docs/README.md#codeblocks): [Video](https://youtu.be/6qzWKRxw9eY)
