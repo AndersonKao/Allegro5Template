@@ -265,3 +265,6 @@ Follow the steps [here](docs/README.md).
 - `dyld: Library not loaded` ...
 
   You need to `brew install allegro` on your Mac. For the detailed steps, please refer to the XCode installation guide.
+
+- Suggestion: Legacy Build System
+    - If you see some missing error messages, please switch to the legacy build system. Please refer [here](https://stackoverflow.com/questions/51205221/how-can-i-use-the-legacy-build-system-with-xcode-10s-xcodebuild) 
