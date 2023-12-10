@@ -80,7 +80,7 @@ Map* create_map(const char * filepath) {
 			game_abort("Map format unmatched\n");
 			return NULL;
 		}
-		getc(pFile); // get the '\n'
+		while(getc(pFile) != '\n'){};
 		*/
 	}
 
@@ -126,7 +126,7 @@ Map* create_map(const char * filepath) {
 			}
 		}
 		if(filepath != NULL)
-			getc(pFile);
+			while(getc(pFile) != '\n'){};
 	}
 	M->beansNum = M->beansCount;
 	return M;
