@@ -243,3 +243,8 @@ ModelManifest.xml
 
 # VSCode
 /.vscode
+
+# pacman
+*.o
+log.txt
+pacman
