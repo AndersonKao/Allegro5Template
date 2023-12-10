@@ -242,12 +242,12 @@ static void draw_power_bean(Map* M, const int row, const int col) {
 }
 
 
-bool is_wall_block(Map* M, int index_x, int index_y) {
+bool is_wall_block(const Map* M, int index_x, int index_y) {
 	if (index_x < 0 || index_x >= M->col_num || index_y < 0 || index_y >= M->row_num)
 		return true;
 	return M->map[index_y][index_x] == '#';
 }
-bool is_room_block(Map* M, int index_x, int index_y) {
+bool is_room_block(const Map* M, int index_x, int index_y) {
 	if (index_x < 0 || index_x >= M->col_num || index_y < 0 || index_y >= M->row_num)
 		return true;
 	return M->map[index_y][index_x] == 'B';

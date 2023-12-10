@@ -20,8 +20,8 @@ void delete_map(Map*);
 void draw_map(const Map*);
 //void draw_block(Map*, RecArea);
 Directions shortest_path_direc(Map* M, int startGridx, int startGridy, int endGridx, int endGridy);
-bool is_wall_block(Map* M, int index_x, int index_y);
-bool is_room_block(Map* M, int index_x, int index_y);
-bool is_wall_point(Map* M , float x, float y);
-bool is_room_point(Map* M , float x, float y);
+bool is_wall_block(const Map* M, int index_x, int index_y);
+bool is_room_block(const Map* M, int index_x, int index_y);
+bool is_wall_point(const Map* M , float x, float y);
+bool is_room_point(const Map* M , float x, float y);
 #endif

@@ -24,7 +24,7 @@ extern bool game_over;
 extern float effect_volume;
 
 /* Declare static function */
-static bool pacman_movable(Pacman* pacman, Map* M, Directions targetDirec) {
+static bool pacman_movable(const Pacman* pacman, const Map* M, Directions targetDirec) {
 	// TODO-HACKATHON 1-2: Determine if the current direction is movable.
 	// That is to say, your pacman shouldn't penetrate 'wall' and 'room'
 	// , where room is reserved for ghost to set up.

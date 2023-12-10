@@ -48,7 +48,7 @@ void ghost_destory(Ghost* ghost);
 void ghost_draw(Ghost* ghost);
 void ghost_NextMove(Ghost* ghost, Directions next);
 void printGhostStatus(GhostStatus);
-bool ghost_movable(Ghost* ghost, Map* M, Directions targetDirec, bool room);
+bool ghost_movable(const Ghost* ghost, const Map* M, Directions targetDirec, bool room);
 /* check if the direction is ok to move_script in; if room = true, then room will be treat as not able to move_script in */
 
 
