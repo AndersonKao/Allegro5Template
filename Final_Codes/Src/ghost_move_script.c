@@ -50,7 +50,7 @@ static void ghost_move_script_FREEDOM_random(Ghost* ghost, Map* M) {
 	int cnt = 0;
 	for (Directions i = 1; i <= 4; i++)
 		if (i != counter_one && ghost_movable(...)) 	proba[cnt++] = i;
-	if (cnt > 1) {
+	if (cnt >= 1) {
 		ghost_NextMove(ghost, proba[generateRandomNumber(...)]);
 	}
 	else { // for the dead end case
