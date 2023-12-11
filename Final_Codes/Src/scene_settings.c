@@ -47,21 +47,26 @@ Scene scene_settings_create(void) {
 	return scene;
 }
 
-// TODO-setting-BGM:
+// TODO-Graphical_Widget:
+// Just suggestions, you can create your own usage.
+	// Selecting BGM:
 	// 1. Declare global variables for storing the BGM. (see `shared.h`, `shared.c`)
 	// 2. Load the BGM in `shared.c`.
-	// 3. Create buttons for selecting BGM in setting scene, involving `scene_settings.c` and `scene_setting.h.
-	// 4. Switch and play the BGM when the button is pressed.
+	// 3. Create dropdown menu for selecting BGM in setting scene, involving `scene_settings.c` and `scene_setting.h.
+	// 4. Switch and play the BGM if the corresponding option is selected.
 
-// TODO-setting-Volume:
+	// Adjusting Volume:
 	// 1. Declare global variables for storing the volume. (see `shared.h`, `shared.c`)
-	// 2. Create buttons for adjusting volume in setting scene, involving `scene_settings.c` and `scene_setting.h.
+	// 2. Create a slider for adjusting volume in setting scene, involving `scene_settings.c` and `scene_setting.h.
+		// 2.1. You may use checkbox to switch between mute and unmute.
 	// 3. Adjust the volume and play when the button is pressed.
 
-// TODO-setting-Map:
+	// Selecting Map:
 	// 1. Preload the map to `shared.c`.
-	// 2. Create buttons for selecting map in setting scene, involving `scene_settings.c` and `scene_setting.h.
-		// 2.1. For player experience, you may also create another scene between menu scene and game scene for selling map.
-	// 3. Create buttons for selecting map in setting scene, involving `scene_settings.c` and `scene_setting.h.
-	// 4. Switch and draw the map when the button is pressed.
-		// 4.1. Suggestions: You may use `al_draw_bitmap` to draw the map. But the map is too large to be drawn in original size. You might want to modify the function to allow scaling.
+	// 2. Create buttons(or dropdown menu) for selecting map in setting scene, involving `scene_settings.c` and `scene_setting.h.
+		// 2.1. For player experience, you may also create another scene between menu scene and game scene for selecting map.
+	// 3. Create buttons(or dropdown menu) for selecting map in setting scene, involving `scene_settings.c` and `scene_setting.h.
+	// 4. Switch and draw the map if the corresponding option is selected.
+		// 4.1. Suggestions: You may use `al_draw_bitmap` to draw the map for previewing. 
+							// But the map is too large to be drawn in original size. 
+							// You might want to modify the function to allow scaling.
