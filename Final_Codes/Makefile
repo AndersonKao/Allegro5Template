@@ -11,6 +11,9 @@ all: pacman
 pacman: $(objects)
 	$(CC) -lm $(CCFLAGS) $(DBG) -o pacman $^
 
+%.o: $(SRC)/%.c $(SRC)/%.h
+	$(CC) -c $< $@
+
 %.o: $(SRC)/%.c
 	$(CC) -c $< $@
 
