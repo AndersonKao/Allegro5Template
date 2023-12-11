@@ -66,7 +66,7 @@ static void draw() {
 		SCREEN_W/2,
 		SCREEN_H - 150,
 		ALLEGRO_ALIGN_CENTER,
-		"PRESS \"ENTER\""
+		"PRESS <ENTER>"
 	);
 
 		// TODO-HACKATHON 3-3: Draw button
