@@ -11,9 +11,9 @@
 extern uint32_t GAME_TICK, GAME_TICK_CD;
 const int GridSize = 22;
 float VOLUME = 1.0;
-extern map_offset_x;
-extern map_offset_y;
-extern block_width, block_height;
+extern int map_offset_x;
+extern int map_offset_y;
+extern int block_width, block_height;
 ALLEGRO_SAMPLE* load_audio(const char* filename) {
 	ALLEGRO_SAMPLE* sample = al_load_sample(filename);
 	if (!sample)

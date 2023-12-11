@@ -41,7 +41,7 @@ static void draw(void);
 static void printinfo(void);
 static void destroy(void);
 static void on_key_down(int key_code);
-static void on_mouse_down(void);
+static void on_mouse_down(int btn, int x, int y, int dz);
 static void render_init_screen(void);
 static void draw_hitboxes(void);
 
@@ -286,7 +286,8 @@ static void on_key_down(int key_code) {
 
 }
 
-static void on_mouse_down(void) {
+static void on_mouse_down(int btn, int x, int y, int dz) {
+
 	// nothing here
 
 }

@@ -13,9 +13,9 @@ const int map_offset_x = 25, map_offset_y = 50;			// pixel offset of where to st
 const int four_probe[4][2] = {{ 1, 0 }, { 0, 1 }, { -1,0 }, { 0, -1 }};
 
 /* Declare static function prototypes. */
-static void draw_block_index(Map* M, int row, int col);
-static void draw_bean(Map* M, const int row, const int col);
-static void draw_power_bean(Map* M, const int row, const int col);
+static void draw_block_index(const Map* M, int row, int col);
+static void draw_bean(const Map* M, const int row, const int col);
+static void draw_power_bean(const Map* M, const int row, const int col);
 
 const char* nthu_map[] = {
 	"#####################################",
@@ -89,13 +89,13 @@ Map* create_map(const char * filepath) {
 	*/
 	M->map = (char**)malloc(sizeof(char*) * M->row_num);
 	if (!M->map) {
-		game_abort(stderr, "map char array malloc error\n");
+		game_abort("map char array malloc error\n");
 		return NULL;
 	}
 	for (int i = 0; i < M->row_num; i++) {
 		M->map[i] = (char*)malloc(sizeof(char) * (M->col_num));
 		if(!M->map[i]){
-			game_abort(stderr, "map char array malloc error\n");
+			game_abort("map char array malloc error\n");
 			return NULL;
 		}
 	}
@@ -176,7 +176,7 @@ void draw_map(Map const* M) {
 	}
 }
 
-static void draw_block_index(Map* M, const int row, const int col) {
+static void draw_block_index(const Map* M, const int row, const int col) {
 	bool U = is_wall_block(M, col, row - 1);
 	bool UR = is_wall_block(M, col + 1, row - 1);
 	bool UL = is_wall_block(M, col -1, row- 1);
@@ -233,11 +233,11 @@ static void draw_block_index(Map* M, const int row, const int col) {
 	}
 }
 
-static void draw_bean(Map* M, const int row, const int col) {
+static void draw_bean(const Map* M, const int row, const int col) {
 	al_draw_filled_circle(map_offset_x + col * block_width + block_width / 2.0, map_offset_y + row * block_height + block_height / 2.0, block_width/6.0,  al_map_rgb(234, 38, 38));
 }
 
-static void draw_power_bean(Map* M, const int row, const int col) {
+static void draw_power_bean(const Map* M, const int row, const int col) {
 	al_draw_filled_circle(map_offset_x + col * block_width + block_width / 2.0, map_offset_y + row * block_height + block_height / 2.0, block_width / 3.0, al_map_rgb(234, 178, 38));
 }
 
