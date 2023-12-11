@@ -34,6 +34,7 @@ Ghost* ghost_create(int flag) {
 	if (!ghost)
 		return NULL;
 
+	ghost->go_in_time = GAME_TICK; 
 	ghost->typeFlag = flag;
 	ghost->objData.Size.x = block_width;
 	ghost->objData.Size.y = block_height;

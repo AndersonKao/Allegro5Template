@@ -35,7 +35,7 @@ typedef struct Ghost{
 	bitmapdata imgdata;
 	script_func_ptr move_script;
 	int speed;
-	int64_t previous_timer_val;
+	int64_t go_in_time;
 	GhostType typeFlag;
 	GhostStatus status;
 	ALLEGRO_BITMAP* move_sprite;

@@ -183,7 +183,7 @@ void ghost_move_script_shortest_path(Ghost* ghost, Map* M, Pacman* pacman) {
 		{
 		case BLOCKED:
 			ghost_move_script_BLOCKED(ghost, M);
-			if (al_get_timer_count(game_tick_timer) > GO_OUT_TIME)
+			if (al_get_timer_count(game_tick_timer) - ghost->go_in_time > GO_OUT_TIME)
 				ghost->status = GO_OUT;
 			break;
 		case FREEDOM:
@@ -195,8 +195,9 @@ void ghost_move_script_shortest_path(Ghost* ghost, Map* M, Pacman* pacman) {
 		case GO_IN:
 			ghost_move_script_GO_IN(ghost, M);
 			if (M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') {
-				ghost->status = GO_OUT;
+				ghost->status = BLOCKED;
 				ghost->speed = 2; // reset the speed after back to the cage.
+				ghost->go_in_time = al_get_timer_count(game_tick_timer); 
 			}
 			break;
 		case FLEE:
