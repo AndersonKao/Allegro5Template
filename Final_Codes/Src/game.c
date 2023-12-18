@@ -1,4 +1,4 @@
-//#pragma once
+n//#pragma once
 
 // [game.c]
 // define shared variables and deal with allegro5 routines.
@@ -41,6 +41,8 @@ static const char* game_title = "I2P(I)_2021 Final Project Template";
 
 // Initialize allegro5 library
 static void allegro5_init(void);
+// Init variables and load resources, change scenes here.
+static void game_init(void);
 // Process events inside the event queue using an infinity loop.
 static void game_start_event_loop(void);
 // Run game logic such as updating the world, checking for collision,
@@ -62,12 +64,8 @@ void game_create() {
 
 	allegro5_init();
 	game_log("Allegro5 initialized");
-	game_log("Game begin");
-	// Initialize shared variables.
-	shared_init();
+	game_init();
 	game_log("Game initialized");
-	// First scene
-	game_change_scene(scene_menu_create());
 	
 	
 	// Draw the first frame.
@@ -146,6 +144,13 @@ static void allegro5_init(void) {
 
 	// Start the timer to update and draw the game.
 	al_start_timer(game_update_timer);
+}
+
+static void game_init(void) {
+	// Initialize shared variables.
+	shared_init();
+	// First scene
+	game_change_scene(scene_menu_create());
 }
 
 static void game_start_event_loop(void) {
