@@ -19,7 +19,6 @@ typedef struct Map Map;
 typedef struct Pacman{
 	object objData;
 	bitmapdata imgdata;
-	func_ptr move;
 	int speed;
 	bool powerUp; // *important: this boolean indicates if pacman is in power bean mode now.
 	ALLEGRO_TIMER* death_anim_counter;
