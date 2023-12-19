@@ -2,6 +2,7 @@
 
 > Images in this page are not updated, but most of them are just difference on version. 
 
+- [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
 - [Note](#note)
 - [Linux(Debian)](#linuxdebian)
 - [Windows](#windows)

@@ -7,6 +7,7 @@ Related Links:
 - [Exercises step-by-step video](https://youtu.be/Araij6j6QME)
 - [Exercises Template](https://github.com/j3soon/Allegro5Template/releases/download/v2020/Exercises.Template.zip)
 - [Final Code](/Final_Codes)
+- [Allegro5 Wiki](https://github.com/liballeg/allegro_wiki/wiki)
 
 ## Installation
 
