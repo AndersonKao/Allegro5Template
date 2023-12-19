@@ -13,8 +13,8 @@
   - [XCode](#xcode)
 - [Others](#others)
 
-## Note
-If you links Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
+## Note (For Code::Blocks, Dev-C++, XCode)
+If you link Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
 
 For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
 
@@ -25,6 +25,8 @@ To check your gcc version, open command window, go to the folder where you insta
 Then go the the Allegro5 github page to find the matched version of pre-built binaries.
 
 ![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
+
+**The version of Allegro5 binaries may not be the matched one for your gcc(compiler) in the following examples.**
 
 ## Linux(Debian)
 
@@ -157,7 +159,7 @@ make clean
     - Both use `non-recursive`.
 
     ![](imgs/mac-search-paths.png)
-    **The image is not updated!!**
+    **The image is not yet updated!!**
 
 5. Open terminal and type:
     ```shell
