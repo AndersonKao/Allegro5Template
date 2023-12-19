@@ -1,4 +1,4 @@
-## Installation
+# Installation
 
 > Images in this page are not updated, but most of them are just difference on version. 
 
@@ -11,7 +11,7 @@
   - [XCode](#xcode)
 - [Others](#others)
 
-### Note
+## Note
 If you links Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
 
 For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
@@ -24,7 +24,7 @@ Then go the the Allegro5 github page to find the matched version of pre-built bi
 
 ![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
 
-### Linux(Debian)
+## Linux(Debian)
 
 Install Allegro5 by following the [official guide](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
 
@@ -40,9 +40,9 @@ To clean object files and executable file, type:
 make clean
 ```
 
-### Windows
+## Windows
 
-#### Visual Studio
+### Visual Studio
 
 **This year we highly recommend you use visual studio 2022**
 
@@ -54,7 +54,7 @@ Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
 
 > Just watch the video will be enough.
 
-#### Code::Blocks
+### Code::Blocks
 
 Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
 
@@ -133,18 +133,18 @@ Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
 
   - Press `F9` and the window will pop out saying "Welcome to Allegro!".
 
-#### Dev-C++
+### Dev-C++
 
 Step-by-step tutorial on [YouTube](https://youtu.be/lwscVtIUy6k).
 
 > Just watch the video will be enough.
 
-### Mac OS
+## Mac OS
 
-#### XCode
+### XCode
 
 Step-by-step tutorial on [YouTube](https://youtu.be/QZdHjFQUQPo).
-###### ~~Step-by-step tutorial on [YouTube](https://youtu.be/7nJNDRCq5o0).~~(Old macOS 10.X)
+~~Step-by-step tutorial on [YouTube](https://youtu.be/7nJNDRCq5o0).~~(Old macOS 10.X)
 
 Open `Terminal` and type:
 
@@ -224,7 +224,7 @@ Click the `Play` button.
 
 ![](imgs/mac-result.png)
 
-### Others
+## Others
 
 Inspect your processor and download the corresponding library:
 
