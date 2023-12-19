@@ -2,6 +2,7 @@
 
 > Images in this page are not updated, but most of them are just difference on version. 
 
+- [Note](#note)
 - [Linux(Debian)](#linuxdebian)
 - [Windows](#windows)
   - [Visual Studio](#visual-studio)
@@ -34,7 +35,7 @@ make
 ./pacman
 ```
 
-To clean object files and executable file, type:
+To clean object files and executable files, type:
 
 ```shell
 make clean
@@ -44,185 +45,162 @@ make clean
 
 ### Visual Studio
 
-**This year we highly recommend you use visual studio 2022**
+**This year we highly recommend you use Visual Studio 2022**
 
-If you use the release VS2022, open it with Visual Studio 2022 will be enough.
+- [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Allegro-in-Visual-Studio#using-nuget-within-visual-studio)
 
-Step-by-step [tutorial(English)](https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/)
-
-Step-by-step tutorial on [YouTube](https://youtu.be/HPHd92nj0Io).
-
-> Just watch the video will be enough.
+- [Video tutorial(Chinese)](https://youtu.be/HPHd92nj0Io).
 
 ### Code::Blocks
 
-Step-by-step tutorial on [YouTube](https://youtu.be/6qzWKRxw9eY).
+- Follow [Official Guide for MinGW(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart#mingw-via-msys2) 
 
-- Download [allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip)
+- [Video tutorial(Chinese)](https://youtu.be/6qzWKRxw9eY).
 
-  Un-zip the file and move it to your C drive. The full path should be like: `C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro`
+- Linking Allegro5 to Code::Blocks by yourself.
+  1. Download [allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip)
+  2. Un-zip the file and move it to your C drive. The full path should be like: `C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro`
+  3.  Create a new project
+      - Open Code::Blocks
+      - `File > New > Project...`
+        - Click `Console application` and `Go`.
+        - Click `Next`, Select `C` and `Next`.
+      - Enter title `allegro-test`, `Next`, `Finish`.
+  4. Set up project
+      - `Project > Build options...`
+      - `[Optional]` In `Compiler settings > Compiler flags`, you can check the `-std=c99` flag if you want to use C99 features.
+      - Set up include directories
 
-- Create a new project
-  - Open Code::Blocks
-  - `File > New > Project...`
-  - Click `Console application` and `Go`.
-  - Click `Next`, Select `C` and `Next`.
-  - Enter title `allegro-test`, `Next`, `Finish`.
+        Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Compiler` and click `Add`, paste the following path into the textbox and click `OK`.
 
-- Set up project
-  - `Project > Build options...`
-  - `[Optional]` In `Compiler settings > Compiler flags`, you can check the `-std=c99` flag if you want to use C99 features.
-  - Set up include directories
+        ```
+        C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\include\
+        ```
 
-    Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Compiler` and click `Add`, paste the following path into the textbox and click `OK`.
+      - Set up library directories
 
-    ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\include\
-    ```
+        Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Linker` and click `Add`, paste the following path into the textbox and click `OK`.
 
-  - Set up library directories
+        ```
+        C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\
+        ```
 
-    Make sure that the focus on the left side is the project name (`allegro-test`). Select `Search directories > Linker` and click `Add`, paste the following path into the textbox and click `OK`.
+      - Select `Debug` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
-    ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\
-    ```
+        ```
+        C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith-debug.dll.a
+        ```
 
-  - Select `Debug` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
+      - Select `Release` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
 
-    ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith-debug.dll.a
-    ```
+        ```
+        C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith.dll.a
+        ```
 
-  - Select `Release` at the left side. Select `Linker settings` and click `Add`, paste the following path into the textbox and click `OK`.
+      - Click `OK`.
 
-    ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\lib\liballegro_monolith.dll.a
-    ```
+  5.  Test the library
+      - Copy the code below and paste to your `main.c` at the left side `Projects > Workspace > [ProjectName](allegro-test) > Sources > main.c`:
+        ```c
+        #include <allegro5/allegro.h>
+        #include <allegro5/allegro_font.h>
+        int main(int argc, char **argv) {
+            al_init();
+            al_init_font_addon();
+            ALLEGRO_DISPLAY* display = al_create_display(800, 600);
+            ALLEGRO_FONT* font = al_create_builtin_font();
+            al_clear_to_color(al_map_rgb(0, 0, 0));
+            al_draw_text(font, al_map_rgb(255, 255, 255), 400, 300, ALLEGRO_ALIGN_CENTER, "Welcome to Allegro!");
+            al_flip_display();
+            al_rest(5.0);
+            al_destroy_font(font);
+            al_destroy_display(display);
+            return 0;
+        }
+        ```
 
-  - Click `OK`.
+      - Press `F9` to compile and run.
 
-- Test the library
+      - If it pops a `dll not found` error, copy the file below to `[Project Directory]\bin\Debug\`
+        ```
+        C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\bin\allegro_monolith-debug-5.2.dll
+        ```
 
-  - Copy the code below and paste to your `main.c` at the left side `Projects > Workspace > [ProjectName](allegro-test) > Sources > main.c`:
-
-    ```c
-    #include <allegro5/allegro.h>
-    #include <allegro5/allegro_font.h>
-    int main(int argc, char **argv) {
-        al_init();
-        al_init_font_addon();
-        ALLEGRO_DISPLAY* display = al_create_display(800, 600);
-        ALLEGRO_FONT* font = al_create_builtin_font();
-        al_clear_to_color(al_map_rgb(0, 0, 0));
-        al_draw_text(font, al_map_rgb(255, 255, 255), 400, 300, ALLEGRO_ALIGN_CENTER, "Welcome to Allegro!");
-        al_flip_display();
-        al_rest(5.0);
-        al_destroy_font(font);
-        al_destroy_display(display);
-        return 0;
-    }
-    ```
-
-  - Press `F9` to compile and run.
-
-  - If it pops a `dll not found` error, copy the file below to `[Project Directory]\bin\Debug\`
-    ```
-    C:\allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1\allegro\bin\allegro_monolith-debug-5.2.dll
-    ```
-
-  - Press `F9` and the window will pop out saying "Welcome to Allegro!".
+      - Press `F9` and the window will pop out saying "Welcome to Allegro!".
 
 ### Dev-C++
 
-Step-by-step tutorial on [YouTube](https://youtu.be/lwscVtIUy6k).
-
-> Just watch the video will be enough.
+- [Video Tutorial(Chinese)](https://youtu.be/lwscVtIUy6k).
 
 ## Mac OS
 
+[Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart#install-with-homebrew)
+
 ### XCode
 
-Step-by-step tutorial on [YouTube](https://youtu.be/QZdHjFQUQPo).
-~~Step-by-step tutorial on [YouTube](https://youtu.be/7nJNDRCq5o0).~~(Old macOS 10.X)
+- [Video Tutorial(Chinese)](https://youtu.be/QZdHjFQUQPo).
+  - ~~[Video Tutorial(Chinese)](https://youtu.be/7nJNDRCq5o0).~~(Old macOS 10.X)
+1. Install allegro by following [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart#install-with-homebrew)
 
-Open `Terminal` and type:
+2. Open `XCode`, Create a new `MacOS` project, choose `App`.
+    - Product Name type `allegro-test`, and for Organization Identifier, you can type anything you want. 
+    - For language, choose `Objective-C`, and uncheck all other checkboxes.
 
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+    - Delete `AppDelegate.h`, `AppDelegate.m`, `ViewController.h`, `ViewController.m`, `Main.m` and select `Move to Trash`.
+    ![](imgs/mac-del-file.png)
+    ![](imgs/mac-trash.png)
 
-You might need to enter your password and press yes a several times.
+3. Click your project at the left side, go to `Building Settings > All` and search `Search Paths`.
 
-After finish installing, type:
+4. Under `Search Paths`, set `Header Search Paths` to `/usr/local/include` and `/opt/homebrew/Cellar/allegro/5.2.7.0/include`(For new `homebrew` case) and set `Library Search Paths` to `/usr/local/lib` and `/opt/homebrew/Cellar/allegro/5.2.7.0/lib`. 
+    - Both use `non-recursive`.
 
-```shell
-brew install allegro
-```
+    ![](imgs/mac-search-paths.png)
+    **The image is not updated!!**
 
-Open `XCode`, Create a new `MacOS` project, choose `App`.
+5. Open terminal and type:
+    ```shell
+    cd /usr/local/Cellar
+    # or /opt/homebrew/Cellar/allegro
+    open .
+    ```
 
-Product Name type `allegro-test`, and for Organization Identifier, you can type anything you want. For language, choose `Objective-C`, and uncheck all other checkboxes.
+6. Navigate to `allegro/5.2.7.0/lib/`
 
-Delete `AppDelegate.h`, `AppDelegate.m`, `ViewController.h`, `ViewController.m`, `Main.m` and select `Move to Trash`.
+7. Sort by `Modified date` and select all files that is modified today. (don't need to select the `pkgconfig` folder)
 
-![](imgs/mac-del-file.png)
-![](imgs/mac-trash.png)
+    ![](imgs/mac-lib.png)
 
-Click your project at the left side, go to `Building Settings > All` and search `Search Paths`.
+8. Go back to XCode and click `General`.
+9. Drag the selected files into the `Frameworks, Libraries, and Embedded Content`.
 
-Under `Search Paths`, set `Header Search Paths` to `/usr/local/include` and `/opt/homebrew/Cellar/allegro/5.2.7.0/include`(For new `homebrew` case) and set `Library Search Paths` to `/usr/local/lib` and `/opt/homebrew/Cellar/allegro/5.2.7.0/lib`. Both use `non-recursive`.
+  ![](imgs/mac-link.png)
 
-![](imgs/mac-search-paths.png)
-**The image is not updated!!**
+10. Create `main.c` (`File > New > File... > C file`), uncheck `Also create a header file`.
+    - Paste the code below to the file.
+      ```c
+      #include <allegro5/allegro.h>
+      #include <allegro5/allegro_font.h>
+      int main(int argc, char **argv) {
+          al_init();
+          al_init_font_addon();
+          ALLEGRO_DISPLAY* display = al_create_display(800, 600);
+          ALLEGRO_FONT* font = al_create_builtin_font();
+          al_clear_to_color(al_map_rgb(0, 0, 0));
+          al_draw_text(font, al_map_rgb(255, 255, 255), 400, 300, ALLEGRO_ALIGN_CENTER, "Welcome to Allegro!");
+          al_flip_display();
+          al_rest(5.0);
+          al_destroy_font(font);
+          al_destroy_display(display);
+          return 0;
+      }
+      ```
 
-Open terminal and type:
+      ![](imgs/mac-code.png)
 
-```shell
-cd /usr/local/Cellar
-# or /opt/homebrew/Cellar/allegro
-open .
-```
+11. Click the `Play` button.
 
-Navigate to `allegro/5.2.7.0/lib/`
-
-Sort by `Modified date` and select all files that is modified today. (don't need to select the `pkgconfig` folder)
-
-![](imgs/mac-lib.png)
-
-Go back to XCode and click `General`
-
-Drag the selected files into the `Frameworks, Libraries, and Embedded Content`.
-
-![](imgs/mac-link.png)
-
-Create `main.c` (`File > New > File... > C file`), uncheck `Also create a header file`.
-
-Paste the code below to the file.
-
-```c
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_font.h>
-int main(int argc, char **argv) {
-    al_init();
-    al_init_font_addon();
-    ALLEGRO_DISPLAY* display = al_create_display(800, 600);
-    ALLEGRO_FONT* font = al_create_builtin_font();
-    al_clear_to_color(al_map_rgb(0, 0, 0));
-    al_draw_text(font, al_map_rgb(255, 255, 255), 400, 300, ALLEGRO_ALIGN_CENTER, "Welcome to Allegro!");
-    al_flip_display();
-    al_rest(5.0);
-    al_destroy_font(font);
-    al_destroy_display(display);
-    return 0;
-}
-```
-
-![](imgs/mac-code.png)
-
-Click the `Play` button.
-
-![](imgs/mac-result.png)
+  ![](imgs/mac-result.png)
 
 ## Others
 
