@@ -115,7 +115,7 @@ Follow the steps [here](docs/README.md).
 
   You should change your input from `Chinese` to `English`, otherwise the keycode will be different.
 
-### Installation on Windows
+### Installation Issue on Windows
 - LNK2019 or LNK2001 bug in Visual Studio
 	- Try turn the option "Project -> Project Property -> Configuration Properties Whole Program Optimization" to "Use Link Time Code Generation
 - "\ZI \GL is not compatible" Problem in Visual Studio
@@ -226,7 +226,7 @@ Follow the steps [here](docs/README.md).
 
   ![](docs/imgs/default-startup.png)
 
-### Installation on Mac OS
+### Installation Issue on Mac OS
 
 - **(This issue should not occur now)** There are OpenGL related bugs in newer version of XCode make sure to use XCode versions prior or equal to 10.3.
 
