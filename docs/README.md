@@ -3,56 +3,47 @@
 > Images in this page are not updated, but most of them are just difference on version. 
 
 - [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
-- [Note](#note)
 - [Linux(Debian)](#linuxdebian)
 - [Windows](#windows)
-  - [Visual Studio](#visual-studio)
+  - [Visual Studio(RECOMMEND)](#visual-studio)
   - [Code::Blocks](#codeblocks)
   - [Dev-C++](#dev-c)
 - [Mac OS](#mac-os)
+  - [homebrew(RECOMMEND)](#homebrew) 
   - [XCode](#xcode)
+- [Note](#note)
 - [Others](#others)
 
-## Note (For Code::Blocks, Dev-C++, XCode)
-If you link Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
 
-For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
-
-To check your gcc version, open command window, go to the folder where you installed minGW. (".../CodeBlocks/MinGW/bin" for Code::Blocks) And type **"gcc --version"**.
-
-![image](https://user-images.githubusercontent.com/56912772/207344304-bd9880f7-961a-4c3f-b0dc-e87f88c43c1d.png)
-
-Then go the the Allegro5 github page to find the matched version of pre-built binaries.
-
-![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
-
-**The version of Allegro5 binaries may not be the matched one for your gcc(compiler) in the following examples.**
 
 ## Linux(Debian)
 
-Install Allegro5 by following the [official guide](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
+- Install Allegro5 by following the [official guide](https://github.com/liballeg/allegro_wiki/wiki/Quickstart)
 
-```shell
-cd Final_Codes
-make
-./pacman
-```
+- To compile
+  ```shell
+  cd Final_Codes
+  make
+  ./pacman
+  ```
 
-To clean object files and executable files, type:
-
-```shell
-make clean
-```
+- To clean object files and executable files
+  ```shell
+  cd Final_Codes
+  make clean
+  ```
 
 ## Windows
 
 ### Visual Studio
 
-**This year we highly recommend you use Visual Studio 2022**
+**This year we highly recommend you use Visual Studio 2022** on Windows.
 
 - [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Allegro-in-Visual-Studio#using-nuget-within-visual-studio)
 
 - [Video tutorial(Chinese)](https://youtu.be/HPHd92nj0Io).
+
+- After installation, just download [the release pack](https://github.com/TunchinKao/Allegro5Template/releases) we provided for you.
 
 ### Code::Blocks
 
@@ -137,7 +128,21 @@ make clean
 
 ## Mac OS
 
-[Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart#install-with-homebrew)
+### homebrew
+- Install Allegro5 by following [Official Guide(English)](https://github.com/liballeg/allegro_wiki/wiki/Quickstart#install-with-homebrew)
+
+- To compile
+  ```shell
+  cd Final_Codes
+  make
+  ./pacman
+  ```
+
+- To clean object files and executable files
+  ```shell
+  cd Final_Codes
+  make clean
+  ```
 
 ### XCode
 
@@ -204,6 +209,22 @@ make clean
 11. Click the `Play` button.
 
   ![](imgs/mac-result.png)
+
+## Note 
+(For Code::Blocks, Dev-C++, XCode)
+If you link Allegro5 libraries by yourself, that is, using a pre-built Allegro5 binaries to setup your project **(For Code::Blocks, Dev-C++, XCode, we do in this way)**, please download the **matched (closest) version of Allegro5 binaries to your gcc(compiler) version**. (You can find them on [Allegro5 Github page](https://github.com/liballeg/allegro5/releases).
+
+For example, if you're using Code::Blocks v20.03 shipped with minGW compiler, your gcc version would be 8.1.0. In this case, please download [pre-built Allegro5 for gcc 8.2.1](https://github.com/liballeg/allegro5/releases/download/5.2.5.0/allegro-x86_64-w64-mingw32-gcc-8.2.1-posix-seh-static-5.2.5.1.zip).
+
+To check your gcc version, open command window, go to the folder where you installed minGW. (".../CodeBlocks/MinGW/bin" for Code::Blocks) And type **"gcc --version"**.
+
+![image](https://user-images.githubusercontent.com/56912772/207344304-bd9880f7-961a-4c3f-b0dc-e87f88c43c1d.png)
+
+Then go the the Allegro5 github page to find the matched version of pre-built binaries.
+
+![image](https://user-images.githubusercontent.com/56912772/207345642-8f772a58-c640-4a5a-b3ee-30d6808b9d9e.png)
+
+**The version of Allegro5 binaries may not be the matched one for your gcc(compiler) in the following examples.**
 
 ## Others
 
