@@ -61,6 +61,7 @@ Ghost* ghost_create(int flag) {
 		ghost->objData.Coord.y = cage_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_pink.png");
 		ghost->move_script = &ghost_move_script_shortest_path;
+		break;
 	default:
 		ghost->objData.Coord.x = cage_grid_x;
 		ghost->objData.Coord.y = cage_grid_y;
@@ -180,12 +181,16 @@ bool ghost_movable(const Ghost* ghost, const Map* M, Directions targetDirec, boo
 	{
 	case UP:
 		...
+		break;
 	case DOWN:
 		...
+		break;
 	case LEFT:
 		...
+		break;
 	case RIGHT:
 		...
+		break;
 	default:
 		// for none UP, DOWN, LEFT, RIGHT direction u should return false.
 		return false;

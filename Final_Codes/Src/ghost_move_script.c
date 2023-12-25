@@ -39,10 +39,11 @@ static void ghost_move_script_FREEDOM_random(Ghost* ghost, Map* M) {
 	// Replace the above code by finish followings.
 	// hint: record the previous move, and skip it when adding direction into array proba
 	/*
-	Direction counter_one = RIGHT;
+	Directions counter_one = RIGHT;
 	switch(ghost->objData.preMove) {
 		case RIGHT:
 			counter_one = LEFT;
+			break;
 		case ...
 	}
 

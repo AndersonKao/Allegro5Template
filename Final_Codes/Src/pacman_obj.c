@@ -40,12 +40,16 @@ static bool pacman_movable(const Pacman* pacman, const Map* M, Directions target
 	{
 	case UP:
 		...
+		break;
 	case DOWN:
 		...
+		break;
 	case LEFT:
 		...
+		break;
 	case RIGHT:
 		...
+		break;
 	default:
 		// for none UP, DOWN, LEFT, RIGHT direction u should return false.
 		return false;
@@ -131,7 +135,7 @@ void pacman_draw(Pacman* pman) {
 				draw_region, draw_region, 0
 			);
 			break;
-		case LEFT:
+		case RIGHT:
 			al_draw_scaled_bitmap(pman->move_sprite, ... + offset, 0,
 				16, 16,
 				drawArea.x + fix_draw_pixel_offset_x, drawArea.y + fix_draw_pixel_offset_y,

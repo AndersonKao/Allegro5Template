@@ -105,7 +105,7 @@ Map* create_map(const char * filepath) {
 		for (int j = 0; j < M->col_num; j++) {
 			if (filepath == NULL)
 				M->map[i][j] = nthu_map[i][j];
-			else
+			else {
 				// TODO-GC-read_txt: input the map from file to M->map[row][col] 
 				// '#' -> wall
 				// '.' -> beans
@@ -114,6 +114,7 @@ Map* create_map(const char * filepath) {
 				/*
 				fscanf(...);
 				*/
+			}
 			switch(M->map[i][j]) {
 			case '#':
 				M->wallnum++;
@@ -142,6 +143,7 @@ void delete_map(Map* M) {
 		...
 		free(...)
 		...
+	}
 	*/
 	free(M);
 }

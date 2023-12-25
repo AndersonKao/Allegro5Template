@@ -65,7 +65,7 @@ static void init(void) {
 	// allocate ghost memory
 	// TODO-HACKATHON 2-1: Allocate dynamic memory for ghosts array.
 	/*
-	ghosts = (...)malloc(sizeof(...) * GHOST_NUM)
+	ghosts = (...)malloc(sizeof(...) * GHOST_NUM);
 	*/
 	if(!ghosts){
 		game_log("We haven't create any ghosts!\n");
@@ -110,6 +110,7 @@ static void checkItem(void) {
 	{
 	case '.':
 		pacman_eatItem(...);
+		break;
 	case 'P':
 		// TODO-GC-PB: ease power bean
 		// pacman_eatItem(...);
