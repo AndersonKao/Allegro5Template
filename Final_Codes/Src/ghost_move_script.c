@@ -7,7 +7,7 @@
 extern uint32_t GAME_TICK_CD;
 extern uint32_t GAME_TICK;
 extern ALLEGRO_TIMER* game_tick_timer;
-extern const int cage_grid_x, cage_grid_y;
+extern const int room_grid_x, room_grid_y;
 
 /* Declare static function prototypes */
 // static function reference: https://stackoverflow.com/questions/558122/what-is-a-static-function-in-c
@@ -92,7 +92,7 @@ static void ghost_move_script_GO_IN(Ghost* ghost, Map* M) {
 	// `shortest_path_direc` is a function that returns the direction of shortest path.
 	// Check `map.c` for its detail usage.
 	// For GO_IN state.
-	ghost->objData.nextTryMove = shortest_path_direc(M, ghost->objData.Coord.x, ghost->objData.Coord.y, cage_grid_x, cage_grid_y);
+	ghost->objData.nextTryMove = shortest_path_direc(M, ghost->objData.Coord.x, ghost->objData.Coord.y, room_grid_x, room_grid_y);
 }
 
 static void ghost_move_script_GO_OUT(Ghost* ghost, Map* M) {
@@ -137,7 +137,7 @@ void ghost_move_script_random(Ghost* ghost, Map* M, Pacman* pacman) {
 			ghost_move_script_GO_IN(ghost, M);
 			if (M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') {
 				ghost->status = GO_OUT;
-				ghost->speed = 2; // reset the speed after back to the cage.
+				ghost->speed = 2; // reset the speed after back to the room.
 			}
 			break;
 		case FLEE:
@@ -197,7 +197,7 @@ void ghost_move_script_shortest_path(Ghost* ghost, Map* M, Pacman* pacman) {
 			ghost_move_script_GO_IN(ghost, M);
 			if (M->map[ghost->objData.Coord.y][ghost->objData.Coord.x] == 'B') {
 				ghost->status = BLOCKED;
-				ghost->speed = 2; // reset the speed after back to the cage.
+				ghost->speed = 2; // reset the speed after back to the room.
 				ghost->go_in_time = al_get_timer_count(game_tick_timer); 
 			}
 			break;

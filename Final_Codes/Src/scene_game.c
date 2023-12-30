@@ -162,7 +162,7 @@ static void status_update(void) {
 		}
 		else if (ghosts[i]->status == FLEE)
 		{
-			// TODO-GC-PB: if ghost is collided by pacman, it should go back to the cage immediately and come out after a period.
+			// TODO-GC-PB: if ghost is collided by pacman, it should go back to the room immediately and come out after a period.
 			/*
 			if(!cheat_mode and collision of pacman and ghost)
 			{

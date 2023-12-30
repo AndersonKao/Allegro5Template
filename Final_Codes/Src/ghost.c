@@ -7,10 +7,10 @@
 /* global variables*/
 // [ NOTE ]
 // if you change the map .txt to your own design.
-// You have to modify cage_grid_{x,y} to corressponding value also.
+// You have to modify room_grid_{x,y} to corressponding value also.
 // Or you can do some change while loading map (reading .txt file)
 // Make the start position metadata stored with map.txt.
-const int cage_grid_x=22, cage_grid_y=11;
+const int room_grid_x=22, room_grid_y=11;
 
 /* shared variables. */
 extern uint32_t GAME_TICK;
@@ -50,21 +50,21 @@ Ghost* ghost_create(int flag) {
 	// TODO-IF: You may design your own special tracking rules.
 	switch (ghost->typeFlag) {
 	case Blinky:
-		ghost->objData.Coord.x = cage_grid_x;
-		ghost->objData.Coord.y = cage_grid_y;
+		ghost->objData.Coord.x = room_grid_x;
+		ghost->objData.Coord.y = room_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_red.png");
 		ghost->move_script = &ghost_move_script_random;
 		break;
 	case Pinky:
 		// *load move script of shortest_path
-		ghost->objData.Coord.x = cage_grid_x;
-		ghost->objData.Coord.y = cage_grid_y;
+		ghost->objData.Coord.x = room_grid_x;
+		ghost->objData.Coord.y = room_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_pink.png");
 		ghost->move_script = &ghost_move_script_shortest_path;
 		break;
 	default:
-		ghost->objData.Coord.x = cage_grid_x;
-		ghost->objData.Coord.y = cage_grid_y;
+		ghost->objData.Coord.x = room_grid_x;
+		ghost->objData.Coord.y = room_grid_y;
 		ghost->move_sprite = load_bitmap("Assets/ghost_move_red.png");
 		ghost->move_script = &ghost_move_script_random;
 		break;
@@ -230,7 +230,7 @@ void ghost_toggle_FLEE(Ghost* ghost, bool setFLEE) {
 void ghost_collided(Ghost* ghost) {
 	if (ghost->status == FLEE) {
 		ghost->status = GO_IN;
-		ghost->speed = 4; // Go back to cage faster
+		ghost->speed = 4; // Go back to room faster
 	}
 }
 
