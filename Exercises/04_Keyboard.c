@@ -90,10 +90,12 @@ void allegro5_init(void) {
     if (!game_display)
         game_abort("failed to create display");
 
-    // Setup update timer.
+    // [TODO] create timer and setup timer, check creation 
+    /*
     game_update_timer = al_create_timer(1.0f / FPS);
     if (!game_update_timer)
         game_abort("failed to create timer");
+    */
 
     // Setup event queue.
     game_event_queue = al_create_event_queue();
