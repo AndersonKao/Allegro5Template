@@ -168,7 +168,7 @@ void printGhostStatus(GhostStatus S) {
 		break;
 	}
 }
-bool ghost_movable(const Ghost* ghost, const Map* M, Directions targetDirec, bool room) {
+bool ghost_movable(const Ghost* ghost, const Map* M, Directions targetDirec, bool disallow_room) {
 	// TODO-HACKATHON 2-3: Determine if the current direction is movable.
 	// Basically, this is a ghost version of `pacman_movable`.
 	// So if you have finished (and you should), you can just "copy and paste"
@@ -196,7 +196,7 @@ bool ghost_movable(const Ghost* ghost, const Map* M, Directions targetDirec, boo
 		return false;
 	}
 
-	if (is_wall_block(M, ..., ...) || (room && is_room_block(M, ..., ...)))
+	if (is_wall_block(M, ..., ...) || (disallow_room && is_room_block(M, ..., ...)))
 		return false;
 	*/
 
