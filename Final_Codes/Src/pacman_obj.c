@@ -109,13 +109,13 @@ void pacman_draw(Pacman* pman) {
 	int offset = 0;
 	if (!game_over) {
 		// TODO-GC-animation: We have two frames for each direction. You can use the value of pman->objData.moveCD to determine which frame of the animation to draw.
-		// For example, if the value if odd, draw 1st frame. Otherwise, draw 2nd frame.
+		// For example, if the value(mod 16) is less than 8, draw 1st frame. Otherwise, draw 2nd frame.
 		// But this frame rate may be a little bit too high. We can use % 32 and draw 1st frame if value is 0~15, and 2nd frame if value is 16~31.
 		/*
-		if(pman->objData.moveCD % 2 == 0){
+		if(pman->objData.moveCD % 16 < 8){
 			offset = 0
 		}
-		else if(pamn->objData.moveCD % 2 == 1){
+		else if(pamn->objData.moveCD % 16 >= 8){
 			offset = 16
 		}
 		*/
