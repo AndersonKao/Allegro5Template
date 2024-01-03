@@ -71,7 +71,7 @@ Ghost* ghost_create(int flag) {
 	}
 	return ghost;
 }
-void ghost_destory(Ghost* ghost) {
+void ghost_destroy(Ghost* ghost) {
 	// TODO-GC-memory: free ghost resource
 
 	/*
